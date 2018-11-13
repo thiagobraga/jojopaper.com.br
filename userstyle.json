@@ -1,0 +1,13 @@
+{
+  "name": "Loja Integrada | Thiago Braga",
+  "description": "Live reloading styles for Loja Integrada",
+  "author": "Thiago Braga <contato@thiagobraga.org>",
+  "namespace": "https://github.com/thiagobraga",
+  "homepageURL": "https://github.com/thiagobraga/loja-integrada-boilerplate",
+  "supportURL": "https://github.com/thiagobraga/loja-integrada-boilerplate/issues",
+  "updateBaseURL": "https://github.com/thiagobraga/loja-integrada-boilerplate/raw/master/release/",
+  "license": "MIT",
+  "match": {
+    "domain": "thiagobraga.lojaintegrada.com.br"
+  }
+}
