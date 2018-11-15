@@ -28,8 +28,17 @@ $(function () {
               Planejar<br>
               Realizar
             </div>
-            <div class="span3 institucional-photo">Epa</div>
-            <div class="span6 institucional-text">Teolste</div>
+
+            <div class="span3 institucional-photo">
+              <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/images/photo-patricia-bonini.png" />
+            </div>
+
+            <div class="span6 institucional-text">
+              Acredito no poder dos sonhos, e da forma em que nossos hábitos se moldam para um objetivo.
+              Foi com as experiências pessoais e profissionais que me fizeram criar a Jojo, todo amor e paixão
+              por papelaria e pela busca por uma qualidade de vida incrível que me dediquei a este projeto,
+              para ajudar a fazer nossos dias leves e produtivos.
+            </div>
           </div>
         </div>
       `)
