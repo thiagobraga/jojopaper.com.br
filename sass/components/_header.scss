@@ -14,10 +14,6 @@
   .busca {
     display: none;
   }
-
-  .inferior .span4 {
-
-  }
 }
 
 #cabecalho {
@@ -29,10 +25,6 @@
 
   .conteiner {
     background-color: transparent;
-
-    // .span3 {
-    //   width: 20%;
-    // }
   }
 }
 
@@ -91,7 +83,7 @@
 
 .icon-shopping-cart:before {
   content: '';
-  background-image: url('https://svgshare.com/i/95D.svg');
+  background-image: url('https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/images/icon-sacola.svg');
   background-repeat: no-repeat;
   width: 31px;
   height: 40px;
