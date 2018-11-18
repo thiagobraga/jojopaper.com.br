@@ -1,0 +1,72 @@
+// Institucional
+
+#rodape .institucional {
+  background: #f7ed92;
+  padding: 40px 0;
+
+  .conteiner > .row-fluid {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.institucional-lead {
+  color: #7f5da4;
+  font-family: 'Umhlanga', sans-serif;
+  font-size: 5.5em;
+  line-height: 1;
+
+  &:hover {
+    color: #7f5da4;
+  }
+}
+
+.institucional-text {
+  color: #636361;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+
+  &:hover {
+    color: #636361;
+  }
+}
+
+.institucional-lead,
+.institucional-text {
+  text-transform: uppercase;
+}
+
+// Pagamento Selos
+
+#rodape .pagamento-selos {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+
+.pagamento-selos {
+  background: #7f5da4;
+  color: #fff;
+
+  ul {
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.footer-newsletter {
+  text-align: right;
+}
+
+.footer > div:not(:first-child):not(.footer-newsletter) {
+  border-left: 1px solid #fff;
+}

@@ -1,0 +1,26 @@
+.carrinho {
+  border-width: 0;
+  padding: 11px 0;
+  text-align: center;
+
+  > a > * {
+    float: initial;
+  }
+
+  > a i {
+    display: inline;
+    line-height: 24px;
+  }
+
+  &.vazio > a span {
+    display: none;
+  }
+}
+
+.icon-shopping-cart:before {
+  content: '';
+  background-image: url('https://svgshare.com/i/95D.svg');
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 40px;
+}

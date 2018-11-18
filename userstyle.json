@@ -1,5 +1,5 @@
 {
-  "name": "Loja Integrada | Thiago Braga",
+  "name": "Jojo Paper",
   "description": "Live reloading styles for Loja Integrada",
   "author": "Thiago Braga <contato@thiagobraga.org>",
   "namespace": "https://github.com/thiagobraga",
@@ -8,6 +8,9 @@
   "updateBaseURL": "https://github.com/thiagobraga/loja-integrada-boilerplate/raw/master/release/",
   "license": "MIT",
   "match": {
-    "domain": "thiagobraga.lojaintegrada.com.br"
+    "domain": [
+      "thiagobraga.lojaintegrada.com.br",
+      "localhost"
+    ]
   }
 }

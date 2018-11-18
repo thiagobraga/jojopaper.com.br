@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name          Loja Integrada | Thiago Braga
+// @name          Jojo Paper
 // @description   Live reloading styles for Loja Integrada
 // @version       0.0.1
 // @author        Thiago Braga <contato@thiagobraga.org>
@@ -14,4 +14,8 @@
 // @include       https://thiagobraga.lojaintegrada.com.br/*
 // @include       http://*.thiagobraga.lojaintegrada.com.br/*
 // @include       https://*.thiagobraga.lojaintegrada.com.br/*
+// @include       http://localhost/*
+// @include       https://localhost/*
+// @include       http://*.localhost/*
+// @include       https://*.localhost/*
 // ==/UserScript==

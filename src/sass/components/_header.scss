@@ -1,0 +1,46 @@
+// Header
+// =====================================================
+
+.barra-inicial {
+  display: none;
+  background-color: #fff;
+}
+
+.conteudo-topo {
+  .superior {
+    display: none;
+  }
+
+  .busca {
+    display: none;
+  }
+}
+
+#cabecalho {
+  background-color: #7f5da4;
+  border-radius: 0 0 20px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+
+  .conteiner {
+    background-color: transparent;
+  }
+}
+
+.logo a {
+  height: 66px;
+}
+
+.menu.superior {
+  display: none;
+}
+
+.conteiner-principal .conteiner {
+  padding: 0;
+  box-shadow: none;
+}
+
+.fundo-principal {
+  background-color: transparent;
+}
