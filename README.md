@@ -6,12 +6,14 @@ e JavaScript.
 ## Instalação
 
 ``` sh
+# Instala os pacotes do projeto
 yarn
 
-# Para desenvolviment
+# Executa o build e escuta alterações em arquivos SCSS e JS
+# É possível abrir https://localhost:3000 que é um proxy do site em produção.
 yarn watch
 
-# Para produção
+# Para deploy em produção
 yarn release
 ```
 
