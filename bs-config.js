@@ -12,10 +12,11 @@ module.exports = {
   snippetOptions: {
     rule: {
       match: /<\/body>/i,
-      fn: function (snippet) {
+      fn: function () {
         return `
-          <script src="/footer.user.js"></script>
-          ${snippet}
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <script src="/scripts.js"></script>
+          <script async src="/browser-sync/browser-sync-client.js?v=2.24.7"></script>
         `;
       }
     }
