@@ -1,5 +1,40 @@
 // Header
 // =====================================================
+.secao-banners {
+  // Distância da altura da navbar com uma
+  // pequena compensação do border-radius
+  padding-top: 50px;
+}
+
+.header-background {
+  background: url('https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/banner.jpg');
+  background-position: left 50% top 25%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 610px;
+
+  @media (max-width: 967px) {
+    background-position: left 50% top 0;
+    background-size: cover;
+    height: 500px;
+  }
+
+  .conteiner {
+    background: transparent;
+  }
+
+  p {
+    color: #fff;
+    font-family: 'Umhlanga', sans-serif;
+    font-size: 5em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.conteiner-principal .header-background .conteiner {
+  padding: 40px 20px;
+}
 
 .barra-inicial {
   display: none;
@@ -25,11 +60,21 @@
 
   .conteiner {
     background-color: transparent;
+    padding: 0 20px;
   }
 }
 
-.logo a {
-  height: 66px;
+.logo {
+  a {
+    height: 66px;
+
+    img {
+      display: block;
+      margin: initial;
+      padding: 13px 0;
+      position: initial;
+    }
+  }
 }
 
 .menu.superior {

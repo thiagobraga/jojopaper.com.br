@@ -1,53 +1,7 @@
-// Institucional
-
-#rodape .institucional {
-  background: #f7ed92;
-  padding: 40px 0;
-
-  .conteiner > .row-fluid {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.institucional-lead {
-  color: #7f5da4;
-  font-family: 'Umhlanga', sans-serif;
-  font-size: 5.5em;
-  line-height: 1;
-
-  &:hover {
-    color: #7f5da4;
-  }
-}
-
-.institucional-text {
-  color: #636361;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-
-  &:hover {
-    color: #636361;
-  }
-}
-
-.institucional-lead,
-.institucional-text {
-  text-transform: uppercase;
-}
-
 // Pagamento Selos
 
 #rodape .pagamento-selos {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  padding: 40px 0;
-  text-transform: uppercase;
+  padding: 80px 0;
 }
 
 .pagamento-selos {
@@ -60,13 +14,78 @@
 
   a {
     color: #fff;
+    transition: color ease 0.4s;
+
+    &:hover {
+      color: #ddd;
+    }
+  }
+}
+
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  ul {
+    li {
+      padding: 4px 0;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.footer-links,
+.footer-atendimento {
+  border-right: 1px solid #fff;
+}
+
+.footer-atendimento,
+.footer-newsletter {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.footer-atendimento span {
+  text-transform: initial;
+}
+
+.footer-social {
+  text-align: center;
+
+  i {
+    font-size: 1.8em;
   }
 }
 
 .footer-newsletter {
   text-align: right;
+
+  input {
+    width: 225px;
+  }
 }
 
-.footer > div:not(:first-child):not(.footer-newsletter) {
-  border-left: 1px solid #fff;
+.footer-bottom-links {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  ul {
+    margin-top: 80px;
+
+    li {
+      float: left;
+      margin-right: 20px;
+    }
+  }
 }

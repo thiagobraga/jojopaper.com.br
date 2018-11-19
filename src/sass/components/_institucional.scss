@@ -1,0 +1,46 @@
+// Institucional
+
+#rodape .institucional {
+  background: #f7ed92;
+  padding: 40px 20px;
+
+  .conteiner > .row-fluid {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.institucional-lead {
+  color: #7f5da4;
+  font-family: 'Umhlanga', sans-serif;
+  font-size: 5.3em;
+  line-height: 1;
+
+  &:hover {
+    color: #7f5da4;
+  }
+}
+
+.institucional-text {
+  color: #636361;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  flex-basis: 100%;
+
+  &:hover {
+    color: #636361;
+  }
+}
+
+.institucional-lead,
+.institucional-text {
+  text-transform: uppercase;
+}
+
+.institucional-photo,
+.institucional-text {
+  margin-left: 3.75%;
+}
