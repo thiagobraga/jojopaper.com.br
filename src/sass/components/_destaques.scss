@@ -1,0 +1,144 @@
+
+.vitrine-destaque {
+  cursor: default;
+  color: #7c7b7b;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.borda-principal {
+    border-width: 0;
+  }
+
+  strong::after {
+    content: '';
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII=');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 4px auto;
+    width: 18px;
+    height: 16px;
+  }
+}
+
+.listagem {
+  .titulo-categoria {
+    &:hover {
+      background: initial;
+      padding-left: initial;
+    }
+
+    &:first-child {
+      margin-top: 40px;
+    }
+  }
+
+  .info-produto {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .preco-produto > div {
+    margin: 0;
+  }
+
+  .listagem-item {
+    &:hover {
+      .acoes-produto {
+        bottom: initial;
+      }
+    }
+
+    .acoes-produto {
+      background-color: transparent;
+      border-width: 0;
+      opacity: 1;
+      position: initial;
+    }
+
+    .botao-comprar {
+      background: transparent;
+      border-radius: 10px;
+      border-color: #ccc;
+      font-size: 0;
+      font-weight: 600;
+      padding: 4px 0;
+      position: relative;
+      width: 95px;
+
+      &::before {
+        content: '';
+        background-image:
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII='),
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII=');
+        background-position: center left, center right;
+        background-repeat: no-repeat;
+        background-size: 9px;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        width: 80px;
+        height: 10px;
+      }
+
+      &::after {
+        content: 'Quero';
+        color: #7c7b7b;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: none;
+      }
+
+      .icon-search {
+        display: none;
+      }
+    }
+
+    .nome-produto {
+      color: #7c7b7b;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      min-height: initial !important;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .preco-produto {
+      line-height: 1.25;
+    }
+
+    .preco-promocional {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  .listagem-linha {
+    ul {
+      width: 100% !important;
+    }
+
+    li {
+      border-color: transparent;
+      width: 33% !important;
+    }
+  }
+}
+
+.preco-venda {
+  display: none;
+}
+
+.bandeiras-produto {
+  display: none;
+}
