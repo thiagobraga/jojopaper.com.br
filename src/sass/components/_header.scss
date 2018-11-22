@@ -60,7 +60,11 @@
 
   .conteiner {
     background-color: transparent;
-    padding: 0 20px;
+    padding: 0 40px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -82,10 +86,13 @@
 }
 
 .conteiner-principal .conteiner {
-  padding: 0;
   box-shadow: none;
 }
 
 .fundo-principal {
   background-color: transparent;
+}
+
+.atalhos-mobile {
+  border: 0;
 }
