@@ -4,6 +4,10 @@
   // Distância da altura da navbar com uma
   // pequena compensação do border-radius
   padding-top: 50px;
+
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
 
 .header-background {
@@ -94,5 +98,33 @@
 }
 
 .atalhos-mobile {
+  background-color: #7f5da4;
   border: 0;
+
+  .icon-home {
+    background: transparent url('https://cdn.awsli.com.br/400x300/843/843617/logo/5e39b01c52.png') no-repeat;
+    padding: 8px 30px 0;
+    top: 10px;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  .icon-user {
+    display: none;
+  }
+
+  li {
+    border: 0;
+
+    &:first-child {
+      margin-left: 20px;
+    }
+  }
+
+  a {
+    padding: 0 20px;
+    top: 8px;
+  }
 }
