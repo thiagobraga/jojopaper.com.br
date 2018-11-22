@@ -77,9 +77,11 @@ $(function () {
         </div>
       `);
 
-      $('.flexslider').flexslider({
+      $('.instagram .flexslider').flexslider({
         animation: 'slide',
         animationLoop: false,
+        itemWidth: 280,
+        itemMargin: 30,
         maxItems: 3,
       });
     }
