@@ -2,7 +2,6 @@ $(function () {
 
   // Remove alguns elementos da página
   $('#barraTopo').remove();
-  $('#cabecalho .inferior').remove();
 
   // Customiza a seção de banners
   let secaoBanners = $('.secao-banners');
