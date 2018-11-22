@@ -1,12 +1,19 @@
 // Institucional
-
 #rodape .institucional {
   background: #f7ed92;
   padding: 40px 20px;
 
-  .conteiner > .row-fluid {
-    display: flex;
-    align-items: center;
+  .conteiner {
+    padding: 0;
+
+    > .row-fluid {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
   }
 }
 
