@@ -26,6 +26,20 @@
   &:hover {
     color: #7f5da4;
   }
+
+  @media (max-width: 767px) {
+    font-size: 4.5em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.institucional-photo {
+  @media (max-width: 767px) {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 40px;
+  }
 }
 
 .institucional-text {
@@ -40,6 +54,11 @@
   &:hover {
     color: #636361;
   }
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    text-align: justify;
+  }
 }
 
 .institucional-lead,
@@ -50,4 +69,8 @@
 .institucional-photo,
 .institucional-text {
   margin-left: 3.75%;
+
+  @media (max-width: 767px) {
+    margin-left: initial;
+  }
 }
