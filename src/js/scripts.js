@@ -147,16 +147,6 @@ $(function () {
               <li><a href="#" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i></a></li>
             </ul>
           </div>
-
-          <div class="span5 footer-newsletter">
-            <p>
-              Quer receber novidades<br>
-              e dicas por e-mail?<br>
-              Coloque seu e-mail aqui :)
-            </p>
-
-            <input type="email" class="newsletter" />
-          </div>
         </div>
 
         <div class="row-fluid footer-bottom-links">
