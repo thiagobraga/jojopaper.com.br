@@ -124,8 +124,8 @@ $(function () {
 
     pagamentoSelos.html(`
       <div class="conteiner">
-        <div class="row-fluid footer">
-          <div class="span2 footer-links">
+        <div class="footer">
+          <div class="footer-links">
             <ul>
               <li><a href="#">Sobre</a></li>
               <li><a href="#">Dúvidas</a></li>
@@ -133,7 +133,7 @@ $(function () {
             </ul>
           </div>
 
-          <div class="span4 footer-atendimento">
+          <div class="footer-atendimento">
             <p>
               Atendimento: <span>09:00h às 18:00h</span><br>
               (14) 98808-9051<br>
@@ -141,20 +141,10 @@ $(function () {
             </p>
           </div>
 
-          <div class="span1 footer-social">
+          <div class="footer-social">
             <ul>
               <li><a href="#" target="_blank" rel="noreferrer noopener"><i class="fa fa-instagram"></i></a></li>
               <li><a href="#" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row-fluid footer-bottom-links">
-          <div class="span12">
-            <ul>
-              <li><a href="#">Formas de Pagamento</a></li>
-              <li><a href="#">Entrega</a></li>
-              <li><a href="#">Trocas e Devoluções</a></li>
             </ul>
           </div>
         </div>
