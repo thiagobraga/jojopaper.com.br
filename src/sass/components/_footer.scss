@@ -48,19 +48,8 @@
       margin-bottom: 4px;
     }
   }
-}
-
-.footer-links,
-.footer-atendimento {
-  border-right: 1px solid #fff;
 
   @media (max-width: 767px) {
-    border-right: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer {
     &.row-fluid {
       box-sizing: border-box;
       flex: 0 1 auto;
@@ -94,6 +83,15 @@
         }
       }
     }
+  }
+}
+
+.footer-links,
+.footer-atendimento {
+  border-right: 1px solid #fff;
+
+  @media (max-width: 767px) {
+    border-right: 0;
   }
 }
 
