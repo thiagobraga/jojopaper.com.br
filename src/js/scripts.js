@@ -130,7 +130,7 @@ $(function () {
               <li><a href="#">Sobre</a></li>
               <li><a href="#">Pagamento e Envio</a></li>
               <li><a href="#">Dúvida e Troca</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#modalContato" data-toggle="modal" data-target="#modalContato">Contato</a></li>
             </ul>
           </div>
 
