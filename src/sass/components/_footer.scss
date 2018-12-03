@@ -6,44 +6,35 @@
   }
 }
 
+#rodape > div:last-child .conteiner {
+  padding: 0 20px;
+}
+
 .pagamento-selos {
   background: #7f5da4;
   color: #fff;
-
-  ul {
-    margin: 0;
-  }
-
-  a {
-    color: #fff;
-    transition: color ease 0.4s;
-
-    &:hover {
-      color: #ddd;
-    }
-  }
 }
 
 .footer {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   display: flex;
+  align-items: center;
 
   > div {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    margin-left: 20px;
-  }
+    padding: 20px 50px;
 
-  p {
-    margin-bottom: 0;
+    &:first-child {
+      padding-left: 0;
+    }
   }
 
   ul {
+    margin: 0;
+
     li {
       padding: 4px 0;
     }
@@ -52,24 +43,32 @@
       margin-bottom: 4px;
     }
   }
+
+  a {
+    color: #fff;
+    transition: color ease 0.25s;
+
+    &:hover {
+      color: #dcbaff;
+    }
+  }
 }
 
 .footer-links {
   margin-left: 0;
 }
 
-.footer-links,
-.footer-atendimento {
-  border-right: 1px solid #fff;
-
-  @media (max-width: 767px) {
-    border-right: 0;
-  }
-}
-
 .footer-atendimento {
   font-size: 12px;
   line-height: 1.6;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  p:not(:first-child) {
+    margin-bottom: 0;
+  }
 
   span {
     text-transform: initial;
@@ -81,7 +80,10 @@
 }
 
 .footer-social {
-  text-align: center;
+  ul {
+    float: left;
+    text-align: center;
+  }
 
   i {
     font-size: 1.8em;
@@ -92,31 +94,11 @@
   }
 }
 
-.footer-bottom-links {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+.footer-links,
+.footer-atendimento {
+  border-right: 1px solid #fff;
 
-  ul {
-    margin-top: 80px;
-
-    li {
-      float: left;
-      margin-right: 20px;
-    }
-
-    @media (max-width: 767px) {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 60px;
-
-      li {
-        text-align: center;
-        float: initial;
-        margin-right: 0;
-      }
-    }
+  @media (max-width: 767px) {
+    border-right: 0;
   }
 }
