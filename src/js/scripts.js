@@ -128,7 +128,8 @@ $(function () {
           <div class="footer-links">
             <ul>
               <li><a href="#">Sobre</a></li>
-              <li><a href="#">Dúvidas</a></li>
+              <li><a href="#">Pagamento e Envio</a></li>
+              <li><a href="#">Dúvida e Troca</a></li>
               <li><a href="#">Contato</a></li>
             </ul>
           </div>
@@ -137,7 +138,13 @@ $(function () {
             <p>
               Atendimento: <span>09:00h às 18:00h</span><br>
               (14) 98808-9051<br>
-              contato@jojopaper.com.br
+              <a href="mailto:contato@jojopaper.com.br" target="_blank" rel="noreferrer noopener">contato@jojopaper.com.br</a>
+            </p>
+
+            <p>
+              Jojo Paper<br>
+              CNPJ 31.273.425/0001-06<br>
+              Bauru-SP
             </p>
           </div>
 
