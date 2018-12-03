@@ -127,9 +127,9 @@ $(function () {
         <div class="footer">
           <div class="footer-links">
             <ul>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Pagamento e Envio</a></li>
-              <li><a href="#">Dúvida e Troca</a></li>
+              <li><a href="/pagina/sobre.html">Sobre</a></li>
+              <li><a href="/pagina/pagamento-e-envio.html">Pagamento e Envio</a></li>
+              <li><a href="/pagina/duvidas-e-trocas.html">Dúvidas e Trocas</a></li>
               <li><a href="#modalContato" data-toggle="modal" data-target="#modalContato">Contato</a></li>
             </ul>
           </div>
