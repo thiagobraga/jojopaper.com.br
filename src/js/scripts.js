@@ -148,8 +148,8 @@ $(function () {
 
           <div class="footer-social">
             <ul>
-              <li><a href="#" target="_blank" rel="noreferrer noopener"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/jojopaper/" target="_blank" rel="noreferrer noopener"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/jojopaperbr/" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i></a></li>
             </ul>
           </div>
         </div>
