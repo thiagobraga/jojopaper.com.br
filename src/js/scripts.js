@@ -19,6 +19,7 @@ $(function () {
     `);
   }
 
+  // Cria um container para a seção do Instagram
   let rodape = $('#rodape');
   if (rodape.length) {
     rodape.prepend(`
