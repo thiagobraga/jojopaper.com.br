@@ -120,8 +120,6 @@ $(function () {
   // Customiza a seção de pagamentos
   let pagamentoSelos = $('.pagamento-selos');
   if (pagamentoSelos.length) {
-    pagamentoSelos.next('div').remove();
-
     pagamentoSelos.html(`
       <div class="conteiner">
         <div class="footer">
