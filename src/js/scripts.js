@@ -65,10 +65,10 @@ $(function () {
           continue;
         }
 
-        // Push the 320x320 thumbnail in the array
+        // Push the 480x480 thumbnail in the array
         // and the link to the post.
         instagramImages.push({
-          thumbnail: node.thumbnail_resources[2].src,
+          thumbnail: node.thumbnail_resources[3].src,
           shortcode: node.shortcode
         });
       }
@@ -89,7 +89,7 @@ $(function () {
                   ${instagramImages.map(item => `
                     <li>
                       <a href="https://www.instagram.com/p/${item.shortcode}" target="_blank" rel="noreferrer noopener">
-                        <img src="${item.thumbnail}" />
+                        <img src="${item.thumbnail}" width="480" height="480" />
                       </a>
                     </li>
                   `).join('')}
