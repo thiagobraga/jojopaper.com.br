@@ -34,7 +34,7 @@ $(function () {
 
   let rodape = $('#rodape');
   if (rodape.length) {
-    let bottom;
+    let bottom, footerBottom, footerBottomText, footerLogoContainer;
 
     // Cria um container para a seção do Instagram
     rodape.prepend(`
@@ -43,7 +43,35 @@ $(function () {
 
     // Customiza o final do rodapé com informações de direitos reservados
     bottom = rodape.children().last();
-    bottom.css('border', 0).addClass('footer-bottom');
+    bottom.removeAttr('style').addClass('footer-bottom');
+
+    footerBottom = $('.footer-bottom');
+
+    footerBottom.find('.span9.span12')
+      .removeClass('span9 span12')
+      .addClass('footer-bottom-copyright')
+      .after('<div class="footer-bottom-text"></div>');
+
+    footerBottomText = $('.footer-bottom-text');
+    footerBottomText.next('div')
+      .removeAttr('style')
+      .addClass('footer-logo-container');
+
+    footerBottom.find('img')
+      .removeAttr('style')
+      .addClass('logo-loja-integrada');
+
+    footerBottomText = $('.footer-bottom-text');
+
+    footerBottomText.append(`
+      Desenvolvido por
+      <a href="http://thiagobraga.org" target="_blank" rel="noreferrer noopener">
+        <span>Thiago <span>Braga</span>
+      </span>
+    `);
+
+    footerLogoContainer = $('.footer-logo-container');
+    footerLogoContainer.prepend(`Criado com`);
   }
 
   // Get Instagram photos using Async/Await
@@ -89,7 +117,7 @@ $(function () {
                   ${instagramImages.map(item => `
                     <li>
                       <a href="https://www.instagram.com/p/${item.shortcode}" target="_blank" rel="noreferrer noopener">
-                        <img src="${item.thumbnail}" width="480" height="480" />
+                        <img class="instagram-photo" src="${item.thumbnail}" width="480" height="480" />
                       </a>
                     </li>
                   `).join('')}
@@ -104,9 +132,36 @@ $(function () {
         animation: 'slide',
         animationLoop: false,
         itemWidth: 280,
-        itemMargin: 30,
         maxItems: 3,
       });
+
+
+    //   var o = Number($(this).data("produtos-linha"));
+    //   if (window.innerWidth < 770) {
+    //     o = 1
+    //   }
+    //   var n = $(this).width() / o - 10;
+    //   $(this).find(".listagem-linha").flexslider({
+    //     animation: "slide",
+    //     slideshow: false,
+    //     selector: "ul > li",
+    //     animationLoop: true,
+    //     controlNav: false,
+    //     smoothHeight: false,
+    //     useCSS: false,
+    //     touch: false,
+    //     prevText: "",
+    //     nextText: "",
+    //     itemWidth: n,
+    //     itemMargin: 0,
+    //     minItems: 1,
+    //     maxItems: o,
+    //     start: function (p) {
+    //       if (p.pagingCount === 1) {
+    //         p.directionNav.hide()
+    //       }
+    //     }
+    //   })
     }
   })();
 

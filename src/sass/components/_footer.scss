@@ -103,16 +103,57 @@
   }
 }
 
-// 20% darker
 #rodape .footer-bottom .conteiner {
+  // 20% darker
   background-color: #4d3863;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.75px;
 }
 
 #rodape > div:last-child .conteiner {
   padding: 20px;
+}
+
+.footer-bottom-text,
+.footer-bottom-copyright,
+.footer-logo-container {
+  text-align: center;
+  min-height: 20px;
+  width: 100%;
+}
+
+.footer-bottom-copyright {
+  margin-bottom: 5px;
+}
+
+.footer-bottom-text,
+.footer-logo-container {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+
+  a {
+    color: #fff;
+    transition: color ease 0.25s;
+    font-weight: 600;
+    letter-spacing: 0;
+
+    &:hover {
+      color: #dcbaff;
+    }
+  }
+}
+
+// Logo da Loja Integrada
+.footer-logo-container {
+  color: #fff;
+
+  .logo-loja-integrada {
+    height: 22px;
+  }
 }

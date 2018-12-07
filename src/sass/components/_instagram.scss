@@ -1,17 +1,24 @@
 .instagram {
   background-color: #e2e2e1;
+  box-sizing: border-box;
   color: #7c7b7b;
   cursor: default;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1.5px;
+  min-height: 454px;
   padding: 40px 20px;
   text-align: center;
   text-transform: uppercase;
+
+  .flexslider {
+    background-color: transparent;
+  }
 }
 
 .instagram-titulo {
-  margin-bottom: 40px;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .instagram-container {
@@ -25,16 +32,9 @@
 }
 
 .instagram-photo {
-  flex-basis: 33.33333333%;
-  max-width: 33.33333333%;
-  padding: 1.5rem 0;
-  flex: 0 0 auto;
+  transition: all ease 0.25s;
 
-  img {
-    transition: all ease 0.25s;
-  }
-
-  &:hover img {
+  &:hover {
     box-shadow: 0 0 4px 1px rgba(127, 93, 164, 0.35);
     transform: scale(1.005);
   }
