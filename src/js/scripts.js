@@ -232,4 +232,9 @@ $(function () {
     `);
   }
 
+  let descricao = $('#descricao');
+  if (descricao.length) {
+    descricao.detach().prependTo('.codigo-produto');
+  }
+
 });
