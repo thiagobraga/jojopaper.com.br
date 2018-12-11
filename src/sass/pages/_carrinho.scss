@@ -1,0 +1,77 @@
+.pagina-carrinho {
+  #corpo {
+    padding-top: 80px;
+  }
+
+  .btn,
+  .botao {
+    background: #f6f6f6;
+    border-radius: 6px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: background ease 0.25s;
+
+    &:hover {
+      background: #f1f1f1;
+    }
+
+    i {
+      margin-left: 0;
+    }
+  }
+
+  .botao.principal {
+    background: #905ec7;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: background ease 0.25s;
+
+    &:hover {
+      background: #7e5ca4;
+    }
+
+    i {
+      margin-left: 0;
+    }
+  }
+}
+
+.carrinho-checkout {
+  .identificacao {
+    hr.sem-margem {
+      display: none;
+    }
+  }
+}
+
+.tabela-carrinho .form-horizontal .controls i {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.table thead th {
+  vertical-align: middle;
+}
+
+.tabela-carrinho {
+  th h6 {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .preco-produto .preco-promocional {
+    font-weight: 300;
+  }
+}
+
+.total .titulo {
+  font-weight: 600;
+}

@@ -13,5 +13,78 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 30px;
   }
+
+  .abas-custom,
+  .codigo-produto {
+    display: none;
+  }
+
+  #descricao {
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+  }
+
+  .acoes-produto {
+    padding-bottom: 40px;
+
+    > div:first-child {
+      float: left;
+    }
+
+    .comprar {
+      clear: both;
+      float: left;
+      text-align: left;
+
+      .disponibilidade-produto {
+        font-size: 0;
+        position: relative;
+      }
+
+      b {
+        font-size: 7px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  .cep {
+    label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .botao.grande {
+    background: #905ec7;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: background ease 0.25s;
+
+    &:hover {
+      background: #7e5ca4;
+    }
+
+    i {
+      display: none;
+    }
+  }
+}
+
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+  margin-left: -3px;
 }

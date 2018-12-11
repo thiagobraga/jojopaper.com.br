@@ -1,8 +1,6 @@
 .vitrine-destaque {
   cursor: default;
   color: #7c7b7b;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1.5px;
   text-align: center;
   text-transform: uppercase;
 
@@ -52,6 +50,10 @@
       .acoes-produto {
         bottom: initial;
       }
+
+      .botao-comprar {
+        box-shadow: 0 0 1px rgba(125, 70, 187, 0.75);
+      }
     }
 
     .acoes-produto {
@@ -59,56 +61,55 @@
       border-width: 0;
       opacity: 1;
       position: initial;
+      display: flex;
+      justify-content: center;
     }
 
     .botao-comprar {
       background: transparent;
-      border-radius: 10px;
       border-color: #ccc;
-      font-size: 0;
-      font-weight: 600;
-      padding: 4px 0;
+      border-radius: 10px;
+      color: #7c7b7b;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 4px 22px;
       position: relative;
-      width: 95px;
+      text-align: center;
+      text-shadow: none;
+      text-transform: uppercase;
+      transition: all ease 0.25s;
+      display: flex;
+      flex-direction: row;
 
-      &::before {
+      &::before,
+      &::after {
         content: '';
-        background-image:
-          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII='),
-          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII=');
-        background-position: center left, center right;
         background-repeat: no-repeat;
         background-size: 9px;
         position: absolute;
         left: 7px;
         top: 7px;
-        width: 80px;
-        height: 10px;
+        right: 7px;
+        height: 9px;
+      }
+
+      &::before {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII=');
+        background-position: center left;
       }
 
       &::after {
-        content: 'Quero';
-        color: #7c7b7b;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 1.2px;
-        text-align: center;
-        text-transform: uppercase;
-        text-shadow: none;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAKlBMVEUAAAB/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaR/XaTDvpLgAAAADXRSTlMAEJ/PQCC/j4BQ73Aw7Ydc6AAAAFhJREFUCNdjYGB1YWBgdAkAErl3VzP03r0uwMB29+5dJSAuYJh7FwKuAiUg4AoS6yxclg1EgXUw2oIZlxgYGITBLAUgCygIFgIJQoTAgiAhiCBQCApmgggAwv9DW4ldKH8AAAAASUVORK5CYII=');
+        background-position: center right;
+        right: 7px;
       }
 
-      .icon-search {
-        display: none;
-      }
     }
 
     .nome-produto {
       color: #7c7b7b;
-      font-family: 'Montserrat', sans-serif;
       font-size: 12px;
       font-weight: 600;
-      letter-spacing: 1.2px;
       min-height: initial !important;
       text-align: center;
       text-transform: uppercase;
@@ -119,10 +120,8 @@
     }
 
     .preco-promocional {
-      font-family: 'Montserrat', sans-serif;
       font-size: 11px;
       font-weight: 300;
-      letter-spacing: 1.2px;
     }
   }
 

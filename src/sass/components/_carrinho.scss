@@ -1,7 +1,16 @@
+.icon-shopping-cart:before {
+  content: '';
+  background-image: url('https://svgshare.com/i/95D.svg');
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 40px;
+}
+
 .carrinho {
   border-width: 0;
   padding: 11px 0;
   text-align: right;
+  position: relative;
 
   > a > * {
     float: initial;
@@ -15,18 +24,6 @@
   &.vazio > a span {
     display: none;
   }
-}
-
-.icon-shopping-cart:before {
-  content: '';
-  background-image: url('https://svgshare.com/i/95D.svg');
-  background-repeat: no-repeat;
-  width: 31px;
-  height: 40px;
-}
-
-.carrinho {
-  position: relative;
 
   .cor-secundaria {
     color: #fff;
@@ -50,5 +47,78 @@
 
   a > span {
     display: none;
+  }
+}
+
+.carrinho-interno {
+  border: 0;
+  top: 66px;
+  width: 365px;
+  text-align: left;
+
+  li {
+    display: flex;
+    vertical-align: initial;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .imagem-produto {
+    order: 1;
+  }
+
+  .nome-produto {
+    order: 2;
+    width: initial;
+    flex: 1;
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  .preco-produto {
+    margin: 0;
+    float: none;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .cor-secundaria {
+    color: #666;
+  }
+
+  .carrinho-rodape {
+    .carrinho-info {
+      float: none;
+
+      i {
+        font-style: normal;
+        text-align: right;
+      }
+    }
+
+    .botao.principal {
+      i {
+        display: none;
+      }
+    }
+  }
+
+  .botao.principal {
+    background: #905ec7;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: background ease 0.25s;
+
+    &:hover {
+      background: #7e5ca4;
+    }
+
+    i {
+      margin-left: 0;
+    }
   }
 }
