@@ -2,8 +2,11 @@
 
 ![](https://img.shields.io/badge/version-0.1.0-green.svg)
 
-Site da [Jojo Paper](https://jojopaper.com.br) criado com [Loja Integrada](https://lojaintegrada.com.br), com diversas modificações de CSS
-e JavaScript.
+Site da [Jojo Paper](https://jojopaper.com.br) criado com [Loja Integrada](https://lojaintegrada.com.br), com diversas modificações de CSS e JavaScript.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/screenshot.png" width="500" />
+</p>
 
 ## Instalação
 
