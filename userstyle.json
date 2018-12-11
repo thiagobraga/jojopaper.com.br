@@ -1,6 +1,7 @@
 {
   "name": "Jojo Paper",
-  "description": "Live reloading styles for Loja Integrada",
+  "description": "Site da Jojo Paper criado com a Loja Integrada",
+  "version": "0.1.0",
   "author": "Thiago Braga <contato@thiagobraga.org>",
   "namespace": "https://github.com/thiagobraga",
   "homepageURL": "https://github.com/thiagobraga/loja-integrada-boilerplate",

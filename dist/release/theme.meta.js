@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Jojo Paper
-// @description   Live reloading styles for Loja Integrada
-// @version       0.0.1
+// @description   Site da Jojo Paper criado com a Loja Integrada
+// @version       0.1.0
 // @author        Thiago Braga <contato@thiagobraga.org>
 // @license       MIT
 // @namespace     https://github.com/thiagobraga
