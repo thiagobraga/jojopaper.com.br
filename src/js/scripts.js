@@ -236,6 +236,10 @@ $(function () {
   if (descricao.length) {
     descricao.detach().insertBefore('.codigo-produto');
   }
+
+  let destaque = $('.listagem .listagem-linha');
+  if (destaque.length) {
+    destaque.find('.acoes-produto a').html('Quero');
   }
 
 });
