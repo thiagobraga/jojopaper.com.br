@@ -1,5 +1,5 @@
 module.exports = {
-  proxy: 'https://thiagobraga.lojaintegrada.com.br',
+  proxy: 'https://jojo-paper.lojaintegrada.com.br',
   reloadDebounce: 200,
   logSnippet: false,
   ghostMode: false,
