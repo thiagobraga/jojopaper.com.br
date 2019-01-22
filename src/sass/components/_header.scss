@@ -65,6 +65,7 @@
   .conteiner {
     background-color: transparent;
     padding: 0 40px;
+    position: relative;
 
     @media (max-width: 767px) {
       display: none;
@@ -86,7 +87,38 @@
 }
 
 .menu.superior {
-  display: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 46px;
+
+  .nivel-um {
+    > li {
+      background-color: rgba(186, 141, 190, 0.85);
+      border: 2px solid #7f5da4;
+      border-top: 0;
+      border-radius: 0 0 8px 8px;
+      margin-left: 10px;
+      padding: 0 15px;
+
+      strong {
+        color: #7f5da4;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 10px 0;
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        border-right: 2px solid #7f5da4;
+      }
+
+      &:hover {
+        border-top-width: 0;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .conteiner-principal .conteiner {
