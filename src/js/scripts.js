@@ -1,5 +1,4 @@
 $(function () {
-
   // Remove alguns elementos da página
   $('#barraTopo').remove();
 
@@ -18,19 +17,6 @@ $(function () {
       </div>
     `);
   }
-
-  // function setSlidesWidth(selector) {
-  //   console.log($('.listagem-linha'));
-  //   let slider = selector.find('.flex-viewport');
-  //   slider.find('li').width(slider.width() / 3);
-  // }
-
-  // let listagemLinha = $('.listagem-linha');
-  // if (listagemLinha.length) {
-  //   $(window).on('load resize', function () {
-  //     setSlidesWidth(listagemLinha);
-  //   });
-  // }
 
   let rodape = $('#rodape');
   if (rodape.length) {
@@ -236,6 +222,8 @@ $(function () {
   if (descricao.length) {
     descricao.detach().insertBefore('.codigo-produto');
   }
+
+  $('.acoes-flutuante').remove();
 
   let destaque = $('.listagem .listagem-linha');
   if (destaque.length) {
