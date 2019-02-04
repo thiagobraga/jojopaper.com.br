@@ -1,6 +1,7 @@
 module.exports = {
-  proxy: 'https://jojo-paper.lojaintegrada.com.br',
-  reloadDebounce: 200,
+  proxy: 'https://thiagobraga.lojaintegrada.com.br',
+  host: 'local.jojopaper.com.br',
+  reloadDebounce: 100,
   logSnippet: false,
   ghostMode: false,
   notify: false,

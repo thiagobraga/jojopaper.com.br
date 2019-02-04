@@ -10,8 +10,7 @@
   "license": "MIT",
   "match": {
     "domain": [
-      "thiagobraga.lojaintegrada.com.br",
-      "jojopaper.com.br"
+      "local.jojopaper.com.br"
     ]
   }
 }

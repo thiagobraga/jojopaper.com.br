@@ -22,6 +22,10 @@ yarn watch
 yarn release
 ```
 
+## Desenvolvimento
+
+- https://local.jojopaper.com.br:3000
+
 ## Processo de deploy
 
 - Gerar arquivos de produção com `yarn release`
