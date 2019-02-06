@@ -88,21 +88,20 @@
 
 .menu.superior {
   background-color: transparent;
+  margin-top: 12px;
   position: absolute;
-  right: 0;
-  top: 46px;
+  right: 100px;
+  top: 0;
 
   .nivel-um {
     > li {
-      background-color: rgba(186, 141, 190, 0.85);
-      border: 2px solid #7f5da4;
-      border-top: 0;
-      border-radius: 0 0 8px 8px;
+      background-color: transparent;
+      border: 0;
       margin-left: 10px;
       padding: 0 15px;
 
       strong {
-        color: #7f5da4;
+        color: #fff;
         font-size: 14px;
         font-weight: 600;
         margin: 10px 0;
