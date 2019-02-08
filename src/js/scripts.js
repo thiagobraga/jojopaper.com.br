@@ -230,4 +230,10 @@ $(function () {
     destaque.find('.acoes-produto a').html('Quero');
   }
 
+  // Categoria
+  $('.pagina-categoria .secao-principal')
+    .find('.coluna').addClass('hide').end()
+    .find('.conteudo').removeClass('span9').addClass('span12');
+
+
 });
