@@ -2,8 +2,39 @@
   #corpo > .conteiner {
     padding-top: 85px;
   }
+
+  .secao-principal .conteudo {
+    margin-left: 0;
+  }
+
+  .ordenar-listagem {
+    display: none;
+  }
 }
 
 .categoria-paginas {
   display: none;
+}
+
+.listagem {
+  .listagem-linha {
+    border-width: 0;
+  }
+
+  .imagem-produto {
+    height: 230px;
+  }
+
+  .listagem-item {
+    .nome-produto {
+      font-weight: 300;
+    }
+
+    .preco-produto strong {
+      color: #7f5da4;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
 }
