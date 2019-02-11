@@ -32,7 +32,13 @@
     font-family: 'Umhlanga', sans-serif;
     font-size: 5em;
     line-height: 1;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
     text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      font-size: 4em;
+      line-height: 1.1;
+    }
   }
 }
 
@@ -46,12 +52,19 @@
 }
 
 .conteudo-topo {
-  .superior {
-    display: none;
+  @media (min-width: 768px) {
+    .superior {
+      display: none;
+    }
   }
 
   .busca {
     display: none;
+  }
+
+  .busca-mobile {
+    background-color: none;
+    border-radius: 0;
   }
 }
 
@@ -62,13 +75,34 @@
   width: 100%;
   z-index: 11;
 
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
+
   .conteiner {
     background-color: transparent;
     padding: 0 40px;
     position: relative;
 
     @media (max-width: 767px) {
-      display: none;
+      padding: 0;
+
+      > .row-fluid > .span3 {
+        display: none;
+      }
+
+      > .row-fluid [class*="span"] {
+        min-height: 0;
+        padding: 0;
+      }
+
+      .atalho-menu {
+        background: none;
+        position: absolute;
+        top: -52px;
+        right: 15px;
+        z-index: 1000;
+      }
     }
   }
 }
@@ -87,25 +121,32 @@
 }
 
 .menu.superior {
-  background-color: transparent;
-  margin-top: 12px;
-  position: absolute;
-  right: 100px;
-  top: 0;
+  @media (min-width: 768px) {
+    background-color: transparent;
+    margin-top: 12px;
+    position: absolute;
+    right: 100px;
+    top: 0;
+  }
 
   .nivel-um {
+    display: block;
+    margin: 0;
+    max-height: 0;
+    transition: max-height ease 0.4s;
+
     > li {
       background-color: transparent;
       border: 0;
-      margin-left: 10px;
-      padding: 0 15px;
+      padding: 0 10px;
 
       strong {
         color: #fff;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px 0;
         text-transform: uppercase;
+        transition: color ease 0.25s;
       }
 
       &:last-child {
@@ -115,6 +156,22 @@
       &:hover {
         border-top-width: 0;
         margin-top: 0;
+
+        strong {
+          color: #dcbaff;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      border: 0;
+
+      > li:last-child {
+        border-right: 0;
+      }
+
+      &.active {
+        margin: 0;
       }
     }
   }
