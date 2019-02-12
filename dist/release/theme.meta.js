@@ -10,12 +10,8 @@
 // @updateURL     https://github.com/thiagobraga/loja-integrada-boilerplate/raw/master/release/theme.meta.js
 // @downloadURL   https://github.com/thiagobraga/loja-integrada-boilerplate/raw/master/release/theme.user.js
 // @run-at        document-start
-// @include       http://thiagobraga.lojaintegrada.com.br/*
-// @include       https://thiagobraga.lojaintegrada.com.br/*
-// @include       http://*.thiagobraga.lojaintegrada.com.br/*
-// @include       https://*.thiagobraga.lojaintegrada.com.br/*
-// @include       http://jojopaper.com.br/*
-// @include       https://jojopaper.com.br/*
-// @include       http://*.jojopaper.com.br/*
-// @include       https://*.jojopaper.com.br/*
+// @include       http://local.jojopaper.com.br/*
+// @include       https://local.jojopaper.com.br/*
+// @include       http://*.local.jojopaper.com.br/*
+// @include       https://*.local.jojopaper.com.br/*
 // ==/UserScript==
