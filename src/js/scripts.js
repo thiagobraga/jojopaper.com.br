@@ -227,7 +227,10 @@ $(function () {
 
   let destaque = $('.listagem .listagem-linha');
   if (destaque.length) {
-    destaque.find('.acoes-produto a').html('Quero');
+    destaque.find('.acoes-produto')
+      .removeClass('hidden-phone')
+      .find('a')
+      .html('Quero');
   }
 
   // Categoria
