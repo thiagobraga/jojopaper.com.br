@@ -117,6 +117,7 @@ $(function () {
       $('.instagram .flexslider').flexslider({
         animation: 'slide',
         animationLoop: false,
+        controlNav: false,
         itemWidth: 280,
         maxItems: 3,
       });

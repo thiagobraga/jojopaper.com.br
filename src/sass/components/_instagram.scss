@@ -10,6 +10,33 @@
 
   .flexslider {
     background-color: transparent;
+    overflow: visible;
+  }
+
+  .flex-direction-nav {
+    .flex-prev {
+      left: -25px;
+
+      &::before {
+        content: '';
+        background: url(https://cdn.awsli.com.br/production/static/loja/estrutura/v1/img/nav-thumbs.png) 0 0;
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .flex-next {
+      right: -25px;
+
+      &::before {
+        content: '';
+        background: url(https://cdn.awsli.com.br/production/static/loja/estrutura/v1/img/nav-thumbs.png) -90px 0;
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 }
 
