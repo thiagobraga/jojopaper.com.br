@@ -6,6 +6,12 @@
   height: 40px;
 }
 
+@media (max-width: 767px) {
+  .icon-shopping-cart {
+    display: none;
+  }
+}
+
 .carrinho {
   border-width: 0;
   padding: 11px 0;

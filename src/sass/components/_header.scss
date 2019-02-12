@@ -98,10 +98,18 @@
 
       .atalho-menu {
         background: none;
+        border: 0;
+        color: rgba(255,255,255,0.8);
+        font-size: 24px;
+        padding: 0;
         position: absolute;
-        top: -52px;
-        right: 15px;
+        top: -45px;
+        right: 20px;
         z-index: 1000;
+
+        &::before {
+          content: '\f0c9';
+        }
       }
     }
   }
@@ -133,7 +141,14 @@
     display: block;
     margin: 0;
     max-height: 0;
-    transition: max-height ease 0.4s;
+    transition: max-height ease 0.4s, padding ease 0.4s;
+
+    .titulo {
+      @media (max-width: 767px) {
+        color: rgba(255,255,255,0.8);
+        font-size: 14px;
+      }
+    }
 
     > li {
       background-color: transparent;
@@ -172,6 +187,8 @@
 
       &.active {
         margin: 0;
+        max-height: 180px;
+        padding: 10px 0;
       }
     }
   }
