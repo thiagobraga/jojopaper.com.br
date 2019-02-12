@@ -156,9 +156,9 @@
       padding: 0 10px;
 
       strong {
-        color: #fff;
+        color: rgba(255,255,255,0.8);
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 300;
         margin: 10px 0;
         text-transform: uppercase;
         transition: color ease 0.25s;
@@ -205,6 +205,7 @@
 .atalhos-mobile {
   background-color: #7f5da4;
   border: 0;
+  height: 60px;
 
   .icon-home {
     background: transparent url('https://cdn.awsli.com.br/400x300/843/843617/logo/5e39b01c52.png') no-repeat;
@@ -218,6 +219,10 @@
 
   .icon-user {
     display: none;
+  }
+
+  ul {
+    height: 60px;
   }
 
   li {
