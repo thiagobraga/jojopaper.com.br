@@ -76,6 +76,7 @@
   z-index: 11;
 
   @media (max-width: 767px) {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     padding-top: 60px;
   }
 
