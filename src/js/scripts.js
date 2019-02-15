@@ -23,9 +23,9 @@ $(function () {
     let bottom, footerBottom, footerBottomText, footerLogoContainer;
 
     // Cria um container para a seção do Instagram
-    rodape.prepend(`
-      <div class="instagram"></div>
-    `);
+    // rodape.prepend(`
+    //   <div class="instagram"></div>
+    // `);
 
     // Customiza o final do rodapé com informações de direitos reservados
     bottom = rodape.children().last();
@@ -61,96 +61,96 @@ $(function () {
   }
 
   // Get Instagram photos using Async/Await
-  (async () => {
-    const instagramImages = [];
+  // (async () => {
+  //   const instagramImages = [];
 
-    try {
-      const userInfoSource = await axios.get('https://www.instagram.com/jojopaper/');
-      const jsonObject = userInfoSource.data.match(/<script type="text\/javascript">window\._sharedData = (.*)<\/script>/)[1].slice(0, -1);
-      const userInfo = JSON.parse(jsonObject);
+  //   try {
+  //     const userInfoSource = await axios.get('https://www.instagram.com/jojopaper/');
+  //     const jsonObject = userInfoSource.data.match(/<script type="text\/javascript">window\._sharedData = (.*)<\/script>/)[1].slice(0, -1);
+  //     const userInfo = JSON.parse(jsonObject);
 
-      // Retrieve only the first 10 results
-      const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 10);
-      for (let media of mediaArray) {
-        const node = media.node;
+  //     // Retrieve only the first 10 results
+  //     const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 10);
+  //     for (let media of mediaArray) {
+  //       const node = media.node;
 
-        // Process only if is an image
-        if (node.__typename && node.__typename !== 'GraphImage') {
-          continue;
-        }
+  //       // Process only if is an image
+  //       if (node.__typename && node.__typename !== 'GraphImage') {
+  //         continue;
+  //       }
 
-        // Push the 480x480 thumbnail in the array
-        // and the link to the post.
-        instagramImages.push({
-          thumbnail: node.thumbnail_resources[3].src,
-          shortcode: node.shortcode
-        });
-      }
-    } catch (e) {
-      console.error('Unable to retrieve photos. Reason: ' + e.toString());
-    }
+  //       // Push the 480x480 thumbnail in the array
+  //       // and the link to the post.
+  //       instagramImages.push({
+  //         thumbnail: node.thumbnail_resources[3].src,
+  //         shortcode: node.shortcode
+  //       });
+  //     }
+  //   } catch (e) {
+  //     console.error('Unable to retrieve photos. Reason: ' + e.toString());
+  //   }
 
-    let instagram = $('.instagram');
-    if (instagram.length) {
-      instagram.html(`
-        <div class="conteiner">
-          <div class="row-fluid">
-            <div class="span12">
-              <h4 class="instagram-titulo">Instagram</h4>
+  //   let instagram = $('.instagram');
+  //   if (instagram.length) {
+  //     instagram.html(`
+  //       <div class="conteiner">
+  //         <div class="row-fluid">
+  //           <div class="span12">
+  //             <h4 class="instagram-titulo">Instagram</h4>
 
-              <div class="flexslider carousel">
-                <ul class="slides">
-                  ${instagramImages.map(item => `
-                    <li>
-                      <a href="https://www.instagram.com/p/${item.shortcode}" target="_blank" rel="noreferrer noopener">
-                        <img class="instagram-photo" src="${item.thumbnail}" width="480" height="480" />
-                      </a>
-                    </li>
-                  `).join('')}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      `);
+  //             <div class="flexslider carousel">
+  //               <ul class="slides">
+  //                 ${instagramImages.map(item => `
+  //                   <li>
+  //                     <a href="https://www.instagram.com/p/${item.shortcode}" target="_blank" rel="noreferrer noopener">
+  //                       <img class="instagram-photo" src="${item.thumbnail}" width="480" height="480" />
+  //                     </a>
+  //                   </li>
+  //                 `).join('')}
+  //               </ul>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     `);
 
-      $('.instagram .flexslider').flexslider({
-        animation: 'slide',
-        animationLoop: false,
-        controlNav: false,
-        itemWidth: 280,
-        maxItems: 3,
-      });
+  //     $('.instagram .flexslider').flexslider({
+  //       animation: 'slide',
+  //       animationLoop: false,
+  //       controlNav: false,
+  //       itemWidth: 280,
+  //       maxItems: 3,
+  //     });
 
 
-    //   var o = Number($(this).data("produtos-linha"));
-    //   if (window.innerWidth < 770) {
-    //     o = 1
-    //   }
-    //   var n = $(this).width() / o - 10;
-    //   $(this).find(".listagem-linha").flexslider({
-    //     animation: "slide",
-    //     slideshow: false,
-    //     selector: "ul > li",
-    //     animationLoop: true,
-    //     controlNav: false,
-    //     smoothHeight: false,
-    //     useCSS: false,
-    //     touch: false,
-    //     prevText: "",
-    //     nextText: "",
-    //     itemWidth: n,
-    //     itemMargin: 0,
-    //     minItems: 1,
-    //     maxItems: o,
-    //     start: function (p) {
-    //       if (p.pagingCount === 1) {
-    //         p.directionNav.hide()
-    //       }
-    //     }
-    //   })
-    }
-  })();
+  //   //   var o = Number($(this).data("produtos-linha"));
+  //   //   if (window.innerWidth < 770) {
+  //   //     o = 1
+  //   //   }
+  //   //   var n = $(this).width() / o - 10;
+  //   //   $(this).find(".listagem-linha").flexslider({
+  //   //     animation: "slide",
+  //   //     slideshow: false,
+  //   //     selector: "ul > li",
+  //   //     animationLoop: true,
+  //   //     controlNav: false,
+  //   //     smoothHeight: false,
+  //   //     useCSS: false,
+  //   //     touch: false,
+  //   //     prevText: "",
+  //   //     nextText: "",
+  //   //     itemWidth: n,
+  //   //     itemMargin: 0,
+  //   //     minItems: 1,
+  //   //     maxItems: o,
+  //   //     start: function (p) {
+  //   //       if (p.pagingCount === 1) {
+  //   //         p.directionNav.hide()
+  //   //       }
+  //   //     }
+  //   //   })
+  //   }
+  // })();
 
   // Customiza a seção institucional
   let institucional = $('.institucional');
