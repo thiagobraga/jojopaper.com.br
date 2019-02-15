@@ -23,9 +23,9 @@ $(function () {
     let bottom, footerBottom, footerBottomText, footerLogoContainer;
 
     // Cria um container para a seção do Instagram
-    // rodape.prepend(`
-    //   <div class="instagram"></div>
-    // `);
+    rodape.prepend(`
+      <div class="instagram"></div>
+    `);
 
     // Customiza o final do rodapé com informações de direitos reservados
     bottom = rodape.children().last();
@@ -61,13 +61,15 @@ $(function () {
   }
 
   // Get Instagram photos using Async/Await
-  // (async () => {
-  //   const instagramImages = [];
+  (async () => {
+    const instagramImages = [],
+      token = '2310460119.b6b2f43.41f8dfdace95418abb9cba109ffa2e28',
+      userID = '2310460119',
+      apiURL = 'https://api.instagram.com/v1/users/self/media/recent';
 
-  //   try {
-  //     const userInfoSource = await axios.get('https://www.instagram.com/jojopaper/');
-  //     const jsonObject = userInfoSource.data.match(/<script type="text\/javascript">window\._sharedData = (.*)<\/script>/)[1].slice(0, -1);
-  //     const userInfo = JSON.parse(jsonObject);
+    try {
+      const userInfoSource = await axios.get(apiURL + '?access_token=' + token);
+      console.log(userInfoSource);
 
   //     // Retrieve only the first 10 results
   //     const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 10);
@@ -86,9 +88,9 @@ $(function () {
   //         shortcode: node.shortcode
   //       });
   //     }
-  //   } catch (e) {
-  //     console.error('Unable to retrieve photos. Reason: ' + e.toString());
-  //   }
+    } catch (e) {
+      console.error('Unable to retrieve photos. Reason: ' + e.toString());
+    }
 
   //   let instagram = $('.instagram');
   //   if (instagram.length) {
@@ -149,8 +151,8 @@ $(function () {
   //   //       }
   //   //     }
   //   //   })
-  //   }
-  // })();
+    // }
+  })();
 
   // Customiza a seção institucional
   let institucional = $('.institucional');
