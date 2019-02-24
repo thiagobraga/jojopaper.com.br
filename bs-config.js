@@ -15,7 +15,6 @@ module.exports = {
       match: /<\/body>/i,
       fn: function () {
         return `
-          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
           <script src="/scripts.js"></script>
           <script async src="/browser-sync/browser-sync-client.js?v=2.24.7"></script>
         `;
