@@ -1,6 +1,10 @@
 $(function () {
-  // Remove alguns elementos da página
+  // Remove alguns elementos da página que não são necessários
   $('#barraTopo').remove();
+  $('#delimitadorBarra').remove();
+
+  // Cancelando bloqueio de contextmenu em imagens
+  $('body').off('contextmenu', 'img');
 
   // Customiza a seção de banners
   let secaoBanners = $('.secao-banners');
