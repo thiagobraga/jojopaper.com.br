@@ -208,8 +208,16 @@ $(function () {
 
   // Categoria
   $('.pagina-categoria .secao-principal')
+    .find('.conteudo').removeClass('span9').addClass('span12')
     .find('.coluna').addClass('hide').end()
-    .find('.conteudo').removeClass('span9').addClass('span12');
 
+  // Move o botão de menu para mobile dentro da barra principal
+  if (window.innerWidth < 768) {
+    let menu = $('.atalho-menu').detach();
+
+    $('.atalhos-mobile ul').append('<li></li>')
+      .find('li:last-child')
+      .append(menu);
+  }
 
 });
