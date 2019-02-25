@@ -1,9 +1,8 @@
 // Header
 // =====================================================
 .secao-banners {
-  // Distância da altura da navbar com uma
-  // pequena compensação do border-radius
-  padding-top: 50px;
+  // Distância da altura da navbar
+  padding-top: 66px;
 
   @media (max-width: 767px) {
     padding-top: 60px;
@@ -63,21 +62,24 @@
   }
 
   .busca-mobile {
-    background-color: none;
+    background: none;
     border-radius: 0;
   }
 }
 
 #cabecalho {
-  background-color: #7f5da4;
   border-radius: 0;
   position: fixed;
   width: 100%;
   z-index: 11;
 
   @media (max-width: 767px) {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     padding-top: 60px;
+  }
+
+  @media (min-width: 768px) {
+    background-color: #7f5da4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
   .conteiner {
@@ -95,22 +97,6 @@
       > .row-fluid [class*="span"] {
         min-height: 0;
         padding: 0;
-      }
-
-      .atalho-menu {
-        background: none;
-        border: 0;
-        color: rgba(255,255,255,0.8);
-        font-size: 24px;
-        padding: 0;
-        position: absolute;
-        top: -45px;
-        right: 20px;
-        z-index: 1000;
-
-        &::before {
-          content: '\f0c9';
-        }
       }
     }
   }
@@ -130,8 +116,9 @@
 }
 
 .menu.superior {
+  background-color: transparent;
+
   @media (min-width: 768px) {
-    background-color: transparent;
     margin-top: 12px;
     position: absolute;
     right: 100px;
@@ -141,12 +128,22 @@
   .nivel-um {
     display: block;
     margin: 0;
-    max-height: 0;
-    transition: max-height ease 0.4s, padding ease 0.4s;
+
+    @media (max-width: 767px) {
+      background-color: #60467c;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform ease 0.4s, padding ease 0.4s;
+    }
 
     .titulo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+
       @media (max-width: 767px) {
-        color: rgba(255,255,255,0.8);
+        // color: rgba(255,255,255,0.8);
         font-size: 14px;
       }
     }
@@ -188,7 +185,7 @@
 
       &.active {
         margin: 0;
-        max-height: 180px;
+        transform: scaleY(1);
         padding: 10px 0;
       }
     }
@@ -206,7 +203,24 @@
 .atalhos-mobile {
   background-color: #7f5da4;
   border: 0;
+  border-bottom: 1px solid #725393;
+  box-sizing: border-box;
   height: 60px;
+
+  .atalho-menu {
+    background: none;
+    border: 0;
+    color: rgba(255,255,255,0.85);
+    font-size: 24px;
+    padding: 0;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+
+    &::before {
+      content: '\f0c9';
+    }
+  }
 
   .icon-home {
     background: transparent url('https://cdn.awsli.com.br/400x300/843/843617/logo/5e39b01c52.png') no-repeat;
