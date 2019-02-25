@@ -39,13 +39,7 @@ yarn release
   - **Descrição:** Alterações JavaScript
   - **Local publicação:** Rodapé
   - **Página publicação:** Todas as páginas
-  - **Tipo:** HTML
+  - **Tipo:** JavaScript
 
-- Em Conteúdo, incluir:
-```
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script></script>
-```
-
-- Logo após essa linha, incluir o conteúdo do arquivo `src/js/scripts.js` no conteúdo da tag script vazia e clicar em **Salvar código HTML**
+- Em Conteúdo, incluir o conteúdo do arquivo `src/js/scripts.js` e clicar em **Salvar código HTML**
 - Após esses passos, aguardar 15 minutos para as alterações entrarem em vigor.
