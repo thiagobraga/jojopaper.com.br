@@ -10,10 +10,15 @@
 
   .flexslider {
     background-color: transparent;
+    border: 0;
     overflow: visible;
   }
 
   .flex-direction-nav {
+    a {
+      background: none;
+    }
+
     .flex-prev {
       left: -25px;
 
@@ -38,6 +43,20 @@
       }
     }
   }
+
+  .flexslider:hover .flex-direction-nav {
+    .flex-prev {
+      left: -35px;
+    }
+
+    .flex-next {
+      right: -35px;
+    }
+  }
+
+  .carousel li {
+    margin-right: 40px;
+  }
 }
 
 .instagram-titulo {
@@ -54,13 +73,4 @@
   justify-content: space-around;
   margin-right: -.5rem;
   margin-left: -.5rem;
-}
-
-.instagram-photo {
-  transition: all ease 0.25s;
-
-  &:hover {
-    box-shadow: 0 0 4px 1px rgba(127, 93, 164, 0.35);
-    transform: scale(1.005);
-  }
 }

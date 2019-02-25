@@ -27,9 +27,7 @@ $(function () {
     let bottom, footerBottom, footerBottomText, footerLogoContainer;
 
     // Cria um container para a seção do Instagram
-    rodape.prepend(`
-      <div class="instagram"></div>
-    `);
+    rodape.prepend('<div class="instagram"></div>');
 
     // Customiza o final do rodapé com informações de direitos reservados
     bottom = rodape.children().last();
@@ -61,102 +59,70 @@ $(function () {
     `);
 
     footerLogoContainer = $('.footer-logo-container');
-    footerLogoContainer.prepend(`Criado com`);
   }
 
-  // Get Instagram photos using Async/Await
-  (async () => {
-    const instagramImages = [],
-      token = '2310460119.b6b2f43.41f8dfdace95418abb9cba109ffa2e28',
-      userID = '2310460119',
-      apiURL = 'https://api.instagram.com/v1/users/self/media/recent';
+  // Get Instagram photos
+  const
+    TOKEN = '7522577409.6ab5761.4a100e85591a416bab1146889306450a',
+    USER_ID = '7522577409',
+    apiURL = 'https://api.instagram.com/v1/users/' + USER_ID + '/media/recent';
 
-    try {
-      const userInfoSource = await axios.get(apiURL + '?access_token=' + token);
-      console.log(userInfoSource);
+  try {
+    $.ajax(apiURL, {
+      data: { access_token: TOKEN },
+      type: 'GET',
+      dataType: 'jsonp'
+    }).done(response => {
+      let instagram = $('.instagram');
+      if (instagram.length) {
+        instagram.html(`
+          <div class="conteiner">
+            <div class="row-fluid">
+              <div class="span12">
+                <h4 class="instagram-titulo">Instagram</h4>
 
-  //     // Retrieve only the first 10 results
-  //     const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 10);
-  //     for (let media of mediaArray) {
-  //       const node = media.node;
+                <div class="flexslider carousel">
+                  <ul class="slides">
+                    ${response.data.map(item => `
+                      <li>
+                        <a href="${item.link}" target="_blank" rel="noreferrer noopener">
+                          <img class="instagram-photo" src="${item.images.standard_resolution.url}" width="480" height="480" />
+                        </a>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
 
-  //       // Process only if is an image
-  //       if (node.__typename && node.__typename !== 'GraphImage') {
-  //         continue;
-  //       }
+        var itemWidth, maxItems,
+          containerWidth = $('.instagram .conteiner').width();
 
-  //       // Push the 480x480 thumbnail in the array
-  //       // and the link to the post.
-  //       instagramImages.push({
-  //         thumbnail: node.thumbnail_resources[3].src,
-  //         shortcode: node.shortcode
-  //       });
-  //     }
-    } catch (e) {
-      console.error('Unable to retrieve photos. Reason: ' + e.toString());
-    }
+        if (containerWidth < 768) {
+          itemWidth = containerWidth - 40;
+          maxItems  = 1;
+        } else {
+          itemWidth = (containerWidth / 3) - 40 * 2;
+          maxItems  = 3;
+        }
 
-  //   let instagram = $('.instagram');
-  //   if (instagram.length) {
-  //     instagram.html(`
-  //       <div class="conteiner">
-  //         <div class="row-fluid">
-  //           <div class="span12">
-  //             <h4 class="instagram-titulo">Instagram</h4>
+        $('.instagram .flexslider').flexslider({
+          animation:     'slide',
+          animationLoop: false,
+          controlNav:    false,
+          itemMargin:    40,
+          itemWidth:     itemWidth,
+          maxItems:      maxItems,
+          move:          1
+        });
 
-  //             <div class="flexslider carousel">
-  //               <ul class="slides">
-  //                 ${instagramImages.map(item => `
-  //                   <li>
-  //                     <a href="https://www.instagram.com/p/${item.shortcode}" target="_blank" rel="noreferrer noopener">
-  //                       <img class="instagram-photo" src="${item.thumbnail}" width="480" height="480" />
-  //                     </a>
-  //                   </li>
-  //                 `).join('')}
-  //               </ul>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     `);
-
-  //     $('.instagram .flexslider').flexslider({
-  //       animation: 'slide',
-  //       animationLoop: false,
-  //       controlNav: false,
-  //       itemWidth: 280,
-  //       maxItems: 3,
-  //     });
-
-
-  //   //   var o = Number($(this).data("produtos-linha"));
-  //   //   if (window.innerWidth < 770) {
-  //   //     o = 1
-  //   //   }
-  //   //   var n = $(this).width() / o - 10;
-  //   //   $(this).find(".listagem-linha").flexslider({
-  //   //     animation: "slide",
-  //   //     slideshow: false,
-  //   //     selector: "ul > li",
-  //   //     animationLoop: true,
-  //   //     controlNav: false,
-  //   //     smoothHeight: false,
-  //   //     useCSS: false,
-  //   //     touch: false,
-  //   //     prevText: "",
-  //   //     nextText: "",
-  //   //     itemWidth: n,
-  //   //     itemMargin: 0,
-  //   //     minItems: 1,
-  //   //     maxItems: o,
-  //   //     start: function (p) {
-  //   //       if (p.pagingCount === 1) {
-  //   //         p.directionNav.hide()
-  //   //       }
-  //   //     }
-  //   //   })
-    // }
-  })();
+      };
+    });
+  } catch (e) {
+    console.error('Unable to retrieve photos. Reason: ' + e.toString());
+  }
 
   // Customiza a seção institucional
   let institucional = $('.institucional');
