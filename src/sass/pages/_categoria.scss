@@ -3,12 +3,18 @@
     padding-top: 85px;
   }
 
-  .secao-principal .conteudo {
-    margin-left: 0;
-  }
-
   .ordenar-listagem {
     display: none;
+  }
+
+  .secao-principal {
+    .coluna {
+      display: none;
+    }
+
+    .conteudo {
+      margin-left: 0;
+    }
   }
 }
 
