@@ -87,6 +87,11 @@
 .produto-compartilhar {
   display: none;
 }
+
+.zm-viewer {
+  z-index: 1;
+}
+
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
   margin-left: -3px;
