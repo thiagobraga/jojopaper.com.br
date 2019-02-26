@@ -54,77 +54,77 @@
   a > span {
     display: none;
   }
-}
 
-.carrinho-interno {
-  border: 0;
-  top: 66px;
-  width: 365px;
-  text-align: left;
+  .carrinho-interno {
+    border: 0;
+    top: 66px;
+    width: 365px;
+    text-align: left;
 
-  li {
-    display: flex;
-    vertical-align: initial;
-    align-items: center;
-    padding: 10px 0;
-  }
+    li {
+      display: flex;
+      vertical-align: initial;
+      align-items: center;
+      padding: 10px 0;
+    }
 
-  .imagem-produto {
-    order: 1;
-  }
+    .imagem-produto {
+      order: 1;
+    }
 
-  .nome-produto {
-    order: 2;
-    width: initial;
-    flex: 1;
-    margin-right: 15px;
-    margin-left: 0;
-  }
+    .nome-produto {
+      order: 2;
+      width: initial;
+      flex: 1;
+      margin-right: 15px;
+      margin-left: 0;
+    }
 
-  .preco-produto {
-    margin: 0;
-    float: none;
-    margin-left: auto;
-    order: 3;
-  }
-
-  .cor-secundaria {
-    color: #666;
-  }
-
-  .carrinho-rodape {
-    .carrinho-info {
+    .preco-produto {
+      margin: 0;
       float: none;
+      margin-left: auto;
+      order: 3;
+    }
 
-      i {
-        font-style: normal;
-        text-align: right;
+    .cor-secundaria {
+      color: #666;
+    }
+
+    .carrinho-rodape {
+      .carrinho-info {
+        float: none;
+
+        i {
+          display: none;
+        }
+      }
+
+      .botao.principal {
+        i {
+          display: none;
+        }
       }
     }
 
     .botao.principal {
+      background: #905ec7;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      transition: background ease 0.25s;
+
+      &:hover {
+        background: #7e5ca4;
+      }
+
       i {
-        display: none;
+        margin-left: 0;
       }
     }
   }
-
-  .botao.principal {
-    background: #905ec7;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    transition: background ease 0.25s;
-
-    &:hover {
-      background: #7e5ca4;
-    }
-
-    i {
-      margin-left: 0;
-    }
-  }
 }
+
