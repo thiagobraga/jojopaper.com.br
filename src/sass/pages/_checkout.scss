@@ -1,0 +1,25 @@
+.campos-pedido {
+  .identificacao-title {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .identificacao {
+    .email-box {
+      float: left;
+      margin-right: 0;
+    }
+
+    .control-group {
+      max-width: initial;
+
+      .submit-email.botao.principal {
+        border-radius: 0 6px 6px 0;
+        float: left;
+        position: initial;
+        max-width: initial;
+      }
+    }
+  }
+}
