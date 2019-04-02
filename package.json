@@ -1,7 +1,7 @@
 {
   "name": "jojopaper.com.br",
   "description": "Site da Jojo Paper criado com a Loja Integrada",
-  "version": "0.1.0",
+  "version": "0.3.2",
   "private": true,
   "browserslist": [
     "> 1%",

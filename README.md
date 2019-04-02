@@ -1,6 +1,6 @@
 # Jojo Paper
 
-![](https://img.shields.io/badge/version-0.3.1-green.svg)
+![](https://img.shields.io/badge/version-0.3.2-green.svg)
 
 Site da [Jojo Paper](https://jojopaper.com.br) criado com [Loja Integrada](https://lojaintegrada.com.br), com diversas modificações de CSS e JavaScript.
 
