@@ -16,7 +16,7 @@ module.exports = {
       fn: function () {
         return `
           <script src="/scripts.js"></script>
-          <script async src="/browser-sync/browser-sync-client.js?v=2.24.7"></script>
+          <script async src="/browser-sync/browser-sync-client.js?v=2.26.3"></script>
         `;
       }
     }
