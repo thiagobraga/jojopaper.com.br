@@ -32,6 +32,7 @@
     letter-spacing: 0;
     text-transform: uppercase;
     transition: background ease 0.25s;
+    padding: 15px 25px;
 
     &:hover {
       background: #7e5ca4;
@@ -39,6 +40,13 @@
 
     i {
       margin-left: 0;
+    }
+  }
+
+  .caixa-destaque {
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
     }
   }
 }
