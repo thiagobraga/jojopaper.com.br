@@ -1,45 +1,55 @@
-# Jojo Paper
+<h1 align="center">Jojo Paper</h1>
 
-![](https://img.shields.io/badge/version-0.3.2-green.svg)
-
-Site da [Jojo Paper](https://jojopaper.com.br) criado com [Loja Integrada](https://lojaintegrada.com.br), com diversas modificações de CSS e JavaScript.
+<h4 align="center">
+  🛍 Site da <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">Jojo Paper</a> criado com <a href="https://lojaintegrada.com.br" target="_blank" rel="nofollow noopener">Loja Integrada</a>
+</h4>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/screenshot.png" width="500" />
+  <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
+    <img src="https://img.shields.io/badge/version-0.3.2-pink.svg" alt="Version 0.3.2">
+  </a>
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thibraga06%40gmail.com&item_name=Contribuir+para+o+desenvolvimento+de+projetos+open+source&currency_code=BRL&source=url" target="_blank" rel="nofollow noopener">
+    <img src="https://img.shields.io/badge/donate-PayPal-green.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#instalacao">Instalação</a> •
+  <a href="#deploy">Deploy</a>
+</p>
+
+<p align="center">
+  <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
+    <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/screenshot.png" alt="Jojo Paper" width="400">
+  </a>
 </p>
 
 ## Instalação
 
+- Executar os comandos:
 ``` sh
-# Instala os pacotes do projeto
 yarn
-
-# Executa o build e escuta alterações em arquivos SCSS e JS
-# É possível abrir https://localhost:3000 que é um proxy do site em produção.
 yarn watch
-
-# Para deploy em produção
-yarn release
 ```
+- Abrir o endereço no navegador:  
+  https://local.jojopaper.com.br:3000
 
-## Desenvolvimento
-
-- https://local.jojopaper.com.br:3000
-
-## Processo de deploy
+## Deploy
 
 - Gerar arquivos de produção com `yarn release`
 - Copiar o conteúdo do arquivo minificado `dist/release/theme.css`
-- Acessar https://app.lojaintegrada.com.br/painel/plataforma/conta/tema/css/editar
+- Acessar <a href="https://app.lojaintegrada.com.br/painel/plataforma/conta/tema/css/editar" target="_blank" rel="nofollow noopener">https://app.lojaintegrada.com.br/painel/plataforma/conta/tema/css/editar</a>
 - Sobrescrever o CSS copiado no bloco de texto e clicar em **Salvar alterações**
-- Em seguida, acessar https://app.lojaintegrada.com.br/painel/configuracao/html/listar
+- Em seguida, acessar <a href="https://app.lojaintegrada.com.br/painel/configuracao/html/listar" target="_blank" rel="nofollow noopener">https://app.lojaintegrada.com.br/painel/configuracao/html/listar</a>
 - Clicar em **Adicionar código**
 - Preencher o formulário com os valores:
-
   - **Descrição:** Alterações JavaScript
   - **Local publicação:** Rodapé
   - **Página publicação:** Todas as páginas
   - **Tipo:** JavaScript
-
 - Em Conteúdo, incluir o conteúdo do arquivo `src/js/scripts.js` e clicar em **Salvar código HTML**
 - Após esses passos, aguardar 15 minutos para as alterações entrarem em vigor.
+
+## TODO
+
+- [ ] Utilizar a API da Loja Integrada para realizar upload de alterações de CSS, JS e HTML.
