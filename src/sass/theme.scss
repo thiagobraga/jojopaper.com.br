@@ -1,16 +1,17 @@
-@import 'fonts/typography';
-@import 'fonts/font-awesome';
+@import
+  'fonts/typography',
+  'fonts/font-awesome',
 
-@import 'components/layout';
-@import 'components/header';
-@import 'components/carrinho';
-@import 'components/destaques';
-@import 'components/footer';
-@import 'components/instagram';
-@import 'components/institucional';
+  'components/layout',
+  'components/header',
+  'components/carrinho',
+  'components/destaques',
+  'components/footer',
+  'components/instagram',
+  'components/institucional',
 
-@import 'pages/content';
-@import 'pages/categoria';
-@import 'pages/produto';
-@import 'pages/carrinho';
-@import 'pages/checkout';
+  'pages/content',
+  'pages/categoria',
+  'pages/produto',
+  'pages/carrinho',
+  'pages/checkout';
