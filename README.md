@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
+    <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/screenshot.png" alt="Jojo Paper" width="400">
+  </a>
+</p>
+
 <h1 align="center">Jojo Paper</h1>
 
 <h4 align="center">
@@ -16,12 +22,6 @@
 <p align="center">
   <a href="#instalacao">Instalação</a> •
   <a href="#deploy">Deploy</a>
-</p>
-
-<p align="center">
-  <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
-    <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/screenshot.png" alt="Jojo Paper" width="400">
-  </a>
 </p>
 
 ## Instalação
