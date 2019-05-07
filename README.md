@@ -6,9 +6,9 @@
 
 <h1 align="center">Jojo Paper</h1>
 
-<h4 align="center">
+<p align="center">
   🛍 Site da <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">Jojo Paper</a> criado com <a href="https://lojaintegrada.com.br" target="_blank" rel="nofollow noopener">Loja Integrada</a>
-</h4>
+</p>
 
 <p align="center">
   <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
