@@ -1,9 +1,13 @@
 .icon-shopping-cart:before {
   content: '';
-  background-image: url('https://svgshare.com/i/95D.svg');
+  background-image: url('https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/icons/icon-cart.png');
   background-repeat: no-repeat;
-  width: 31px;
-  height: 40px;
+  background-size: 100%;
+  opacity: 0.9;
+  position: relative;
+  top: 5px;
+  width: 23px;
+  height: 30px;
 }
 
 @media (max-width: 767px) {
