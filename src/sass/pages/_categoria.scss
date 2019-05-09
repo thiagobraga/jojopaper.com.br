@@ -36,10 +36,13 @@
       font-weight: 600;
     }
 
-    .preco-produto strong {
-      color: #7f5da4;
-      font-weight: 600;
-      font-size: 18px;
+    .preco-produto {
+      margin-bottom: 5px;
+      margin-top: 10px;
+
+      strong {
+        font-size: 16px;
+      }
     }
   }
 
