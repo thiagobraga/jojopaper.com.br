@@ -5,7 +5,6 @@ module.exports = {
     key: process.env.HOME + '/Certificates/local.jojopaper.com.br-key.pem',
     cert: process.env.HOME + '/Certificates/local.jojopaper.com.br.pem'
   },
-  reloadDebounce: 100,
   logSnippet: false,
   ghostMode: false,
   notify: false,
