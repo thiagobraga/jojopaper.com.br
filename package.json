@@ -2,7 +2,7 @@
   "name": "jojopaper.com.br",
   "description": "Site da Jojo Paper criado com a Loja Integrada",
   "author": "Thiago Braga <contato@thiagobraga.org>",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "userstyle": {
