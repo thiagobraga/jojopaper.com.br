@@ -1,3 +1,9 @@
+.pagina-carrinho.carrinho-checkout {
+  .conteiner-principal .conteiner {
+    padding-top: 85px;
+  }
+}
+
 .campos-pedido {
   .identificacao-title {
     font-size: 16px;
@@ -6,19 +12,18 @@
   }
 
   .identificacao {
-    .email-box {
-      float: left;
-      margin-right: 0;
+    .control-group .submit-email.botao.principal {
+      border-radius: 0 4px 4px 0;
+      max-width: initial;
+      min-width: initial;
+      width: 125px;
     }
 
-    .control-group {
-      max-width: initial;
+    .email-box {
+      margin-right: 148px;
 
-      .submit-email.botao.principal {
-        border-radius: 0 6px 6px 0;
-        float: left;
-        position: initial;
-        max-width: initial;
+      input[type='text'] {
+        border-radius: 4px 0 0 4px;
       }
     }
   }

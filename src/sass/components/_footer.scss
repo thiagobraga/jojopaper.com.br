@@ -11,7 +11,7 @@
 }
 
 .pagamento-selos {
-  background: #7f5da4;
+  background: $primary-color;
   color: #fff;
 }
 
@@ -155,11 +155,6 @@
 }
 
 .footer-bottom-text,
-.footer-bottom-copyright {
-  margin-bottom: 5px;
-}
-
-.footer-bottom-text,
 .footer-logo-container {
   color: #fff;
   font-size: 11px;
@@ -181,6 +176,7 @@
 // Logo da Loja Integrada
 .footer-logo-container {
   color: #fff;
+  margin-top: 10px;
 
   .logo-loja-integrada {
     height: 22px;

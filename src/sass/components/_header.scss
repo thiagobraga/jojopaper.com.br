@@ -78,7 +78,7 @@
   }
 
   @media (min-width: 768px) {
-    background-color: #7f5da4;
+    background-color: $primary-color;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
@@ -121,7 +121,7 @@
   @media (min-width: 768px) {
     margin-top: 12px;
     position: absolute;
-    right: 100px;
+    right: 130px;
     top: 0;
   }
 
@@ -161,10 +161,6 @@
         transition: color ease 0.25s;
       }
 
-      &:last-child {
-        border-right: 2px solid #7f5da4;
-      }
-
       &:hover {
         border-top-width: 0;
         margin-top: 0;
@@ -200,7 +196,7 @@
 }
 
 .atalhos-mobile {
-  background-color: #7f5da4;
+  background-color: $primary-color;
   border: 0;
   border-bottom: 1px solid #725393;
   box-sizing: border-box;

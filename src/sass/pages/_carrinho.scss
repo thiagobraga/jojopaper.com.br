@@ -32,7 +32,6 @@
     letter-spacing: 0;
     text-transform: uppercase;
     transition: background ease 0.25s;
-    padding: 15px 25px;
 
     &:hover {
       background: #7e5ca4;
@@ -56,6 +55,10 @@
     hr.sem-margem {
       display: none;
     }
+  }
+
+  .atendimento {
+    display: none;
   }
 }
 
@@ -82,4 +85,35 @@
 
 .total .titulo {
   font-weight: 600;
+}
+
+.titulo {
+  font-family: Montserrat, sans-serif;
+}
+
+.cabecalho-interno {
+  .titulo small {
+    display: block;
+    font-size: 12px;
+  }
+}
+
+.finalizar-compra {
+  .form-horizontal {
+    letter-spacing: 0;
+  }
+
+  .atualizar-quantidade {
+    display: none !important;
+  }
+
+  .acao-editar {
+    .botao,
+    .botao.principal {
+      box-sizing: border-box;
+      height: 38px;
+      line-height: 36px;
+      padding: 0 15px;
+    }
+  }
 }

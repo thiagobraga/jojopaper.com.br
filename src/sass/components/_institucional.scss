@@ -18,13 +18,13 @@
 }
 
 .institucional-lead {
-  color: #7f5da4;
+  color: $primary-color;
   font-family: 'Umhlanga', sans-serif;
   font-size: 5.3em;
   line-height: 1;
 
   &:hover {
-    color: #7f5da4;
+    color: $primary-color;
   }
 
   @media (max-width: 767px) {
