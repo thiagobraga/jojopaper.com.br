@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
-    <img src="https://img.shields.io/badge/version-0.3.5-pink.svg" alt="Version 0.3.5">
+    <img src="https://img.shields.io/badge/version-0.3.6-pink.svg" alt="Version 0.3.6">
   </a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thibraga06%40gmail.com&item_name=Contribuir+para+o+desenvolvimento+de+projetos+open+source&currency_code=BRL&source=url" target="_blank" rel="nofollow noopener">
     <img src="https://img.shields.io/badge/donate-PayPal-green.svg">
@@ -28,15 +28,15 @@
 
 - Executar os comandos:
 ``` sh
-yarn
-yarn watch
+make install
+make
 ```
 - Abrir o endereço no navegador:  
   https://local.jojopaper.com.br:3000
 
 ## Deploy
 
-- Gerar arquivos de produção com `yarn release`
+- Gerar arquivos de produção com `make release`
 - Copiar o conteúdo do arquivo minificado `dist/release/theme.css`
 - Acessar <a href="https://app.lojaintegrada.com.br/painel/plataforma/conta/tema/css/editar" target="_blank" rel="nofollow noopener">https://app.lojaintegrada.com.br/painel/plataforma/conta/tema/css/editar</a>
 - Sobrescrever o CSS copiado no bloco de texto e clicar em **Salvar alterações**
