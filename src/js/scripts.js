@@ -6,6 +6,21 @@ $(function () {
   // Cancelando bloqueio de contextmenu em imagens
   $('body').off('contextmenu', 'img');
 
+  // Remove fontes não utilizadas
+  $('link[href^="//fonts.googleapis.com"]').remove();
+
+  // Insere ícone de login na navbar
+  $('#cabecalho .carrinho').prepend(`
+    <a class="user-login" href="/conta/index">
+      <i class="icon-user fundo-principal"></i>
+      <span>
+        <b class="titulo cor-secundaria"><span>Minha Conta</span></b>
+        <span class="cor-secundaria">Produto adicionado</span>
+      </span>
+      <span class="titulo cor-secundaria vazio-text">Carrinho vazio</span>
+    </a>
+  `);
+
   // Customiza a seção de banners
   let secaoBanners = $('.secao-banners');
   if (secaoBanners.length) {
