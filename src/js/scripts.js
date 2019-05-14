@@ -233,6 +233,12 @@ $(function () {
     $('.atalhos-mobile ul').append('<li></li>')
       .find('li:last-child')
       .append(menu);
+
+    $('.menu.superior .nivel-um').append(`
+      <li class="divider"></li>
+      <li class="borda-principal"><a href="/conta/index"><strong class="titulo cor-secundaria">Login</strong></a></li>
+      <li class="borda-principal"><a href="/carrinho/index"><strong class="titulo cor-secundaria">Carrinho</strong></a></li>
+    `);
   }
 
 });

@@ -11,7 +11,7 @@
 }
 
 .pagamento-selos {
-  background: $primary-color;
+  background: $purple;
   color: #fff;
 }
 
@@ -55,7 +55,7 @@
     transition: color ease 0.25s;
 
     &:hover {
-      color: #dcbaff;
+      color: $light-purple;
     }
   }
 }
@@ -168,7 +168,7 @@
     letter-spacing: 0;
 
     &:hover {
-      color: #dcbaff;
+      color: $light-purple;
     }
   }
 }

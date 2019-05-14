@@ -78,7 +78,7 @@
   }
 
   @media (min-width: 768px) {
-    background-color: $primary-color;
+    background-color: $purple;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
@@ -130,11 +130,17 @@
     margin: 0;
 
     @media (max-width: 767px) {
-      background-color: #60467c;
+      background-color: $dark-purple;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
       transform: scaleY(0);
       transform-origin: top;
       transition: transform ease 0.4s, padding ease 0.4s;
+    }
+
+    .divider {
+      background-color: hsla(270, 28%, 32%, 0.8);
+      height: 1px;
+      margin: 10px;
     }
 
     .titulo {
@@ -166,7 +172,7 @@
         margin-top: 0;
 
         strong {
-          color: #dcbaff;
+          color: $light-purple;
         }
       }
     }
@@ -196,27 +202,24 @@
 }
 
 .atalhos-mobile {
-  background-color: $primary-color;
+  background-color: #7f5da4;
   border: 0;
   border-bottom: 1px solid #725393;
   box-sizing: border-box;
   height: 60px;
 
   .atalho-menu {
-    background: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZh%0D%0AcyIgZGF0YS1pY29uPSJiYXJzIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtYmFycyBmYS13LTE0%0D%0AIiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0i%0D%0AMCAwIDQ0OCA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE2IDEzMmg0MTZjOC44%0D%0AMzcgMCAxNi03LjE2MyAxNi0xNlY3NmMwLTguODM3LTcuMTYzLTE2LTE2LTE2SDE2QzcuMTYzIDYw%0D%0AIDAgNjcuMTYzIDAgNzZ2NDBjMCA4LjgzNyA3LjE2MyAxNiAxNiAxNnptMCAxNjBoNDE2YzguODM3%0D%0AIDAgMTYtNy4xNjMgMTYtMTZ2LTQwYzAtOC44MzctNy4xNjMtMTYtMTYtMTZIMTZjLTguODM3IDAt%0D%0AMTYgNy4xNjMtMTYgMTZ2NDBjMCA4LjgzNyA3LjE2MyAxNiAxNiAxNnptMCAxNjBoNDE2YzguODM3%0D%0AIDAgMTYtNy4xNjMgMTYtMTZ2LTQwYzAtOC44MzctNy4xNjMtMTYtMTYtMTZIMTZjLTguODM3IDAt%0D%0AMTYgNy4xNjMtMTYgMTZ2NDBjMCA4LjgzNyA3LjE2MyAxNiAxNiAxNnoiPjwvcGF0aD48L3N2Zz4=');
-    background-size: cover;
+    background: none;
     border: 0;
-    filter: invert(1);
-    height: auto;
-    opacity: 0.9;
+    color: rgba(255,255,255,0.85);
+    font-size: 24px;
     padding: 0;
-    right: 15px;
     top: 15px;
-    width: 25px;
+    right: 15px;
     z-index: 1000;
 
     &::before {
-      content: '';
+      content: '\f0c9';
     }
   }
 
