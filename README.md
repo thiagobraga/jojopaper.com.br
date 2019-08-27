@@ -53,3 +53,4 @@ make
 ## TODO
 
 - [ ] Utilizar a API da Loja Integrada para realizar upload de alterações de CSS, JS e HTML.
+- [ ] Usar um arquivo `.env` para armazenar o token do Instagram
