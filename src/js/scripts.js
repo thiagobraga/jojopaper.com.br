@@ -76,14 +76,13 @@ $(function () {
     footerLogoContainer = $('.footer-logo-container');
   }
 
-  // Get Instagram photos
-  const
-    TOKEN = '7522577409.6ab5761.4a100e85591a416bab1146889306450a',
-    USER_ID = '7522577409',
-    apiURL = 'https://api.instagram.com/v1/users/' + USER_ID + '/media/recent';
+  // Get photos from Instagram API
+  const USER_ID = 'INSERT_USER_ID';
+  const TOKEN = 'INSERT_TOKEN';
+  const API_URL = 'https://api.instagram.com/v1/users/' + USER_ID + '/media/recent';
 
   try {
-    $.ajax(apiURL, {
+    $.ajax(API_URL, {
       data: { access_token: TOKEN },
       type: 'GET',
       dataType: 'jsonp'
