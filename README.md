@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/version-1.0.2-8C64A8.svg">
   </a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thibraga06%40gmail.com&item_name=Contribuir+para+o+desenvolvimento+de+projetos+open+source&currency_code=BRL&source=url" target="_blank" rel="nofollow noopener">
-    <img src="https://img.shields.io/badge/donate-PayPal-green.svg">
+    <img src="https://img.shields.io/badge/donate-PayPal-F4EB86.svg">
   </a>
 </p>
 
@@ -32,7 +32,6 @@
 
 - Executar os comandos:
 ``` sh
-make install
 make
 ```
 - Abrir o endereço no navegador:  
