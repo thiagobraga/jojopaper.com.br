@@ -2,8 +2,8 @@ module.exports = {
   proxy: 'https://thiagobraga.lojaintegrada.com.br',
   host: 'local.jojopaper.com.br',
   https: {
-    key: './src/cert/local.jojopaper.com.br-key.pem',
-    cert: './src/cert/local.jojopaper.com.br.pem'
+    key: './certs/local.jojopaper.com.br-key.pem',
+    cert: './certs/local.jojopaper.com.br.pem'
   },
   logSnippet: false,
   ghostMode: false,

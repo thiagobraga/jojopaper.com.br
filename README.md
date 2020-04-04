@@ -30,10 +30,20 @@
 
 ## Instalação
 
-- Executar os comandos:
-``` sh
-make
-```
+### Configurar HTTPS
+
+- Instalar [mkcert](https://github.com/FiloSottile/mkcert)
+- Executar na raiz do projeto:
+  ``` sh
+  cd certs && mkcert local.jojopaper.com.br && cd -
+  ```
+
+### Realizar o build
+
+- Novamente na raiz, executar o comando:
+  ``` sh
+  make
+  ```
 - Abrir o endereço no navegador:  
   https://local.jojopaper.com.br:3000
 
@@ -56,4 +66,3 @@ make
 ## TODO
 
 - [ ] Utilizar a API da Loja Integrada para realizar upload de alterações de CSS, JS e HTML.
-- [ ] Usar um arquivo `.env` para armazenar o token do Instagram
