@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://jojopaper.com.br" target="_blank" rel="nofollow noopener">
-    <img src="https://img.shields.io/badge/version-1.0.2-8C64A8.svg">
+    <img src="https://img.shields.io/badge/version-1.0.3-8C64A8.svg">
   </a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=thibraga06%40gmail.com&item_name=Contribuir+para+o+desenvolvimento+de+projetos+open+source&currency_code=BRL&source=url" target="_blank" rel="nofollow noopener">
     <img src="https://img.shields.io/badge/donate-PayPal-0a4ea1.svg">
