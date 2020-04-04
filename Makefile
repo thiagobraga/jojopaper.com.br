@@ -1,5 +1,6 @@
 PWD := $(shell pwd)
 PATH := ${PWD}/node_modules/.bin:$(PATH)
+.ONESHELL: install
 .SILENT: build clean install release watch
 all: install build watch
 
@@ -7,7 +8,8 @@ clean:
 	rm -rf dist/debug node_modules
 
 install:
-	if [ ! -d node_modules ]; then npm ci; fi
+	[ ! -f yarn.lock ] || [ -d node_modules ] && yarn && exit
+	[ -f yarn.lock ] && [ -d node_modules ] && echo 'Already installed' && exit
 
 build:
 	sass -s compressed --no-charset --no-source-map src/sass:dist/debug
