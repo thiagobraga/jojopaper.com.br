@@ -7,7 +7,7 @@ clean:
 	rm -rf theme.css node_modules
 
 install:
-	if [ ! -d node_modules ]; then yarn; fi
+	yarn
 
 build:
 	sass -s compressed --no-charset --no-source-map src/sass:.
