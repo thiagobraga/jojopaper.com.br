@@ -1,7 +1,7 @@
 PWD := $(shell pwd)
 PATH := ${PWD}/node_modules/.bin:$(PATH)
-.SILENT: clean install build release watch
-all: clean install build watch
+.SILENT: clean install dev release watch
+all: clean install dev watch
 
 clean:
 	rm -rf theme.css node_modules
@@ -9,16 +9,16 @@ clean:
 install:
 	yarn
 
-build:
-	sass -s compressed --no-charset --no-source-map src/sass:.
+dev:
+	sass -s expanded --no-charset --no-source-map src/sass:.
 	css2userstyle --no-userscript theme.css
 
 release:
 	sass -s compressed --no-charset --no-source-map src/sass:.
-	postcss theme.css --use autoprefixer cssnano --replace --no-map
+	postcss theme.css --no-map --replace --use autoprefixer cssnano
 	css2userstyle --no-userscript theme.css
 
 watch:
-	chokidar src/sass -c 'make -s build' & \
+	chokidar src/sass -c 'make -s dev' & \
 		browser-sync start --config bs-config.js & \
 		wait
