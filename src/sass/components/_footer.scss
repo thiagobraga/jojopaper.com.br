@@ -1,3 +1,5 @@
+// Footer
+// =============================================================================
 #rodape .pagamento-selos {
   padding: 80px 10px;
 
@@ -53,6 +55,8 @@
   a {
     color: #fff;
     transition: color ease 0.25s;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: $light-purple;
@@ -116,6 +120,11 @@
 
   i {
     font-size: 1.8em;
+    width: 25px;
+  }
+
+  span {
+    margin-left: 10px;
   }
 
   @media (max-width: 767px) {
@@ -125,7 +134,7 @@
 
 .footer-links,
 .footer-atendimento {
-  border-right: 1px solid #fff;
+  border-right: 1px solid rgba(#fff, 35%);
 
   @media (max-width: 767px) {
     border-right: 0;

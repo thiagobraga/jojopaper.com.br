@@ -1,5 +1,5 @@
 // Header
-// =====================================================
+// =============================================================================
 .secao-banners {
   // Distância da altura da navbar
   padding-top: $navbar-height;
@@ -41,6 +41,8 @@
 }
 
 .conteudo-topo {
+  height: $navbar-height;
+
   @media (min-width: 768px) {
     .superior {
       display: none;
@@ -109,7 +111,7 @@
   background-color: transparent;
 
   @media (min-width: 768px) {
-    margin-top: 12px;
+    margin-top: 13px;
     position: absolute;
     right: 130px;
     top: 0;
