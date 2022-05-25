@@ -1,16 +1,48 @@
-$(function () {
-  // Remove alguns elementos da página que não são necessários
-  $('#barraTopo').remove();
-  $('#delimitadorBarra').remove();
+/* eslint-disable no-empty-pattern */
+/**
+ * Jojo Paper
+ *
+ * This file contains the scripts needed to run the Jojo Paper website,
+ * built on the Loja Integrada e-commerce platform. As this tool does
+ * not provide much customization in the site's HTML structure, it was
+ * necessary to use JavaScript to be able to modify the layout as expected.
+ *
+ * @author  Thiago Braga <thi@thiagobraga.dev>
+ */
+(async () => {
+  const acoesFlutuante = $('.acoes-flutuante');
+  const barraTopo = $('#barraTopo');
+  const cabecalho = $('#cabecalho');
+  const cabecalhoCarrinho = cabecalho.find('.carrinho');
+  const delimitadorBarra = $('#delimitadorBarra');
+  const descricao = $('#descricao');
+  const destaque = $('.listagem .listagem-linha');
+  const images = $('img[alt^="jojo banner"]');
+  const institucional = $('.institucional');
+  const linkFont = $('link[href^="//fonts.googleapis.com"]');
+  const pagamentoSelos = $('.pagamento-selos');
+  const rodape = $('#rodape');
 
-  // Cancelando bloqueio de contextmenu em imagens
+  /**
+   * Verifica se já foi carregado o banner, para alterar as dimensões,
+   * pois a Loja Integrada carrega a imagem em 1140x1140, distorcendo
+   * a imagem. Esta alteração obtém as fotos em 1425x1000 como exportado.
+   */
+  images.each(({ }, img) => img.src = img.src.replace('1140x1140', '1920x1347'));
+
+  /**
+   * Remove fontes e alguns elementos da página que não são necessários
+   */
+  linkFont.remove();
+  barraTopo.remove();
+  acoesFlutuante.remove();
+  delimitadorBarra.remove();
+
+  // Desfaz o bloqueio de contextmenu em imagens
   $('body').off('contextmenu', 'img');
 
-  // Remove fontes não utilizadas
-  $('link[href^="//fonts.googleapis.com"]').remove();
-
   // Insere ícone de login na navbar
-  $('#cabecalho .carrinho').prepend(`
+  cabecalhoCarrinho.prepend(/*html*/ `
     <a class="user-login" href="/conta/index">
       <i class="icon-user fundo-principal"></i>
       <span>
@@ -21,127 +53,45 @@ $(function () {
     </a>
   `);
 
-  // Customiza a seção de banners
-  let secaoBanners = $('.secao-banners');
-  if (secaoBanners.length) {
-    secaoBanners.html(`
-      <div class="header-background">
-        <div class="conteiner">
-          <p>
-            Papelaria para<br>
-            planejar, organizar<br>
-            decorar e inspirar
-          </p>
-        </div>
-      </div>
-    `);
-  }
-
-  let rodape = $('#rodape');
+  // Cria o rodapé do site
   if (rodape.length) {
-    let bottom, footerBottom, footerBottomText, footerLogoContainer;
-
-    // Cria um container para a seção do Instagram
-    rodape.prepend('<div class="instagram"></div>');
+    let bottom, footerBottom, footerBottomText;
 
     // Customiza o final do rodapé com informações de direitos reservados
     bottom = rodape.children().last();
     bottom.removeAttr('style').addClass('footer-bottom');
 
     footerBottom = $('.footer-bottom');
-
-    footerBottom.find('.span9.span12')
+    footerBottom
+      .find('.span9.span12')
       .removeClass('span9 span12')
       .addClass('footer-bottom-copyright')
-      .after('<div class="footer-bottom-text"></div>');
+      .after(/*html*/ `<div class="footer-bottom-text"></div>`);
 
     footerBottomText = $('.footer-bottom-text');
-    footerBottomText.next('div')
+    footerBottomText
+      .next('div')
       .removeAttr('style')
       .addClass('footer-logo-container');
 
-    footerBottom.find('img')
+    footerBottom
+      .find('img')
       .removeAttr('style')
       .addClass('logo-loja-integrada');
 
     footerBottomText = $('.footer-bottom-text');
 
-    footerBottomText.append(`
+    footerBottomText.append(/*html*/ `
       Desenvolvido por
-      <a href="http://thiagobraga.org" target="_blank" rel="noreferrer noopener">
+      <a href="https://thiagobraga.dev" target="_blank" rel="noreferrer noopener">
         <span>Thiago <span>Braga</span>
       </span>
     `);
-
-    footerLogoContainer = $('.footer-logo-container');
-  }
-
-  // Get photos from Instagram API
-  const USER_ID = 'INSERT_USER_ID';
-  const TOKEN = 'INSERT_TOKEN';
-  const API_URL = 'https://api.instagram.com/v1/users/' + USER_ID + '/media/recent';
-
-  try {
-    $.ajax(API_URL, {
-      data: { access_token: TOKEN },
-      type: 'GET',
-      dataType: 'jsonp'
-    }).done(response => {
-      let instagram = $('.instagram');
-      if (instagram.length) {
-        instagram.html(`
-          <div class="conteiner">
-            <div class="row-fluid">
-              <div class="span12">
-                <h4 class="instagram-titulo">Instagram</h4>
-
-                <div class="flexslider carousel">
-                  <ul class="slides">
-                    ${response.data.map(item => `
-                      <li>
-                        <a href="${item.link}" target="_blank" rel="noreferrer noopener">
-                          <img class="instagram-photo" src="${item.images.standard_resolution.url}" width="480" height="480" />
-                        </a>
-                      </li>
-                    `).join('')}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        `);
-
-        var itemWidth, maxItems,
-          containerWidth = $('.instagram .conteiner').width();
-
-        if (containerWidth < 768) {
-          itemWidth = containerWidth - 40;
-          maxItems  = 1;
-        } else {
-          itemWidth = (containerWidth / 3) - 40 * 2;
-          maxItems  = 3;
-        }
-
-        $('.instagram .flexslider').flexslider({
-          animation:     'slide',
-          animationLoop: false,
-          controlNav:    false,
-          itemMargin:    40,
-          itemWidth:     itemWidth,
-          maxItems:      maxItems,
-          move:          1
-        });
-
-      };
-    });
-  } catch (e) {
-    console.error('Unable to retrieve photos. Reason: ' + e.toString());
   }
 
   // Customiza a seção institucional
-  let institucional = $('.institucional');
   if (institucional.length) {
-    institucional.html(`
+    institucional.html(/*html*/ `
       <div class="conteiner">
         <div class="row-fluid">
           <div class="institucional-lead">
@@ -151,7 +101,7 @@ $(function () {
           </div>
 
           <div class="institucional-photo">
-            <img src="https://raw.githubusercontent.com/thiagobraga/jojopaper.com.br/master/src/images/photo-patricia-bonini.png" />
+            <img src="https://cdn.awsli.com.br/843/843617/arquivos/patricia-bonini-web.png" />
           </div>
 
           <div class="institucional-text">
@@ -166,9 +116,8 @@ $(function () {
   }
 
   // Customiza a seção de pagamentos
-  let pagamentoSelos = $('.pagamento-selos');
   if (pagamentoSelos.length) {
-    pagamentoSelos.html(`
+    pagamentoSelos.html(/*html*/ `
       <div class="conteiner">
         <div class="footer">
           <div class="footer-links">
@@ -184,7 +133,7 @@ $(function () {
             <p>
               Atendimento: <span>09:00h às 18:00h</span><br>
               (14) 98808-9051<br>
-              <a href="mailto:contato@jojopaper.com.br" target="_blank" rel="noreferrer noopener">contato@jojopaper.com.br</a>
+              <a href="mailto:jojopaperbr@gmail.com" target="_blank" rel="noreferrer noopener">jojopaperbr@gmail.com</a>
             </p>
 
             <p>
@@ -196,8 +145,8 @@ $(function () {
 
           <div class="footer-social">
             <ul>
-              <li><a href="https://www.instagram.com/jojopaper/" target="_blank" rel="noreferrer noopener"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://www.facebook.com/jojopaperbr/" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/jojopaper/" target="_blank" rel="noreferrer noopener"><i class="fa fa-instagram"></i> <span>/ jojopaper</span></a></li>
+              <li><a href="https://www.facebook.com/jojopaperbr/" target="_blank" rel="noreferrer noopener"><i class="fa fa-facebook"></i> <span>/ jojopaperbr</span></a></li>
             </ul>
           </div>
         </div>
@@ -205,16 +154,13 @@ $(function () {
     `);
   }
 
-  let descricao = $('#descricao');
   if (descricao.length) {
     descricao.detach().insertBefore('.codigo-produto');
   }
 
-  $('.acoes-flutuante').remove();
-
-  let destaque = $('.listagem .listagem-linha');
   if (destaque.length) {
-    destaque.find('.acoes-produto')
+    destaque
+      .find('.acoes-produto')
       .removeClass('hidden-phone')
       .find('a')
       .html('Quero');
@@ -222,22 +168,36 @@ $(function () {
 
   // Categoria
   $('.pagina-categoria .secao-principal')
-    .find('.conteudo').removeClass('span9').addClass('span12')
-    .find('.coluna').addClass('hide').end()
+    .find('.conteudo')
+    .removeClass('span9')
+    .addClass('span12')
+    .find('.coluna')
+    .addClass('hide')
+    .end();
 
   // Move o botão de menu para mobile dentro da barra principal
   if (window.innerWidth < 768) {
-    let menu = $('.atalho-menu').detach();
+    let menu = $('.atalho-menu');
+    let menuSuperior = $('.menu.superior');
+    let nivelUm = menuSuperior.children('.nivel-um');
 
-    $('.atalhos-mobile ul').append('<li></li>')
+    menuSuperior.addClass('no-height');
+
+    $('.atalhos-mobile ul')
+      .append('<li></li>')
       .find('li:last-child')
-      .append(menu);
+      .append(menu.detach());
 
-    $('.menu.superior .nivel-um').append(`
+    nivelUm.append(/*html*/ `
       <li class="divider"></li>
       <li class="borda-principal"><a href="/conta/index"><strong class="titulo cor-secundaria">Login</strong></a></li>
       <li class="borda-principal"><a href="/carrinho/index"><strong class="titulo cor-secundaria">Carrinho</strong></a></li>
     `);
-  }
 
-});
+    menu.on('click', () => {
+      nivelUm.attr('class').indexOf('active') === -1
+        ? menuSuperior.removeClass('no-height')
+        : menuSuperior.addClass('no-height');
+    });
+  }
+})();

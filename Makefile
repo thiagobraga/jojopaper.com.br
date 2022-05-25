@@ -1,26 +1,24 @@
 PWD := $(shell pwd)
 PATH := ${PWD}/node_modules/.bin:$(PATH)
-.ONESHELL: install
-.SILENT: build clean install release watch
-all: install build watch
+.SILENT: clean install dev release watch
+all: clean install dev watch
 
 clean:
-	rm -rf dist/debug node_modules
+	rm -rf theme.css node_modules
 
 install:
-	[ ! -f yarn.lock ] || [ -d node_modules ] && yarn && exit
-	[ -f yarn.lock ] && [ -d node_modules ] && echo 'Already installed' && exit
+	yarn
 
-build:
-	sass -s compressed --no-charset --no-source-map src/sass:dist/debug
-	css2userstyle --no-userscript dist/debug/theme.css
+dev:
+	sass -s expanded --no-charset --no-source-map src/sass:.
+	css2userstyle --no-userscript theme.css
 
 release:
-	sass -s compressed --no-charset --no-source-map src/sass:dist/release
-	postcss dist/release/theme.css --use autoprefixer cssnano --replace --no-map
-	css2userstyle --no-userscript dist/release/theme.css
+	sass -s compressed --no-charset --no-source-map src/sass:.
+	postcss theme.css --no-map --replace --use autoprefixer cssnano
+	css2userstyle --no-userscript theme.css
 
 watch:
-	chokidar src/sass -c 'make -s build' & \
+	chokidar src/sass -c 'make -s dev' & \
 		browser-sync start --config bs-config.js & \
 		wait
