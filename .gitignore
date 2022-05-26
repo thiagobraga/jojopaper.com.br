@@ -161,5 +161,6 @@ $RECYCLE.BIN/
 
 certs/*
 debug/
+dist/
 layout/
 theme*.css
