@@ -23,6 +23,8 @@
   const pagamentoSelos = $('.pagamento-selos');
   const rodape = $('#rodape');
 
+  const IS_PRODUCTION = /(www\.)*jojopaper\.com\.br/.test(window.location.host);
+
   /**
    * Verifica se já foi carregado o banner, para alterar as dimensões,
    * pois a Loja Integrada carrega a imagem em 1140x1140, distorcendo
@@ -101,7 +103,7 @@
           </div>
 
           <div class="institucional-photo">
-            <img src="https://cdn.awsli.com.br/843/843617/arquivos/patricia-bonini-web.png" />
+            <img src="https://cdn.awsli.com.br/${IS_PRODUCTION ? '823/823980' : '843/843617'}/arquivos/patricia-bonini.png" />
           </div>
 
           <div class="institucional-text">
