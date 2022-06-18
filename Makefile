@@ -1,5 +1,6 @@
 PWD := $(shell pwd)
 PATH := ${PWD}/node_modules/.bin:$(PATH)
+POSTCSS_OPTIONS := autoprefixer cssnano
 .SILENT: clean install dev release watch
 all: clean install dev watch
 
@@ -10,12 +11,12 @@ install:
 	yarn
 
 dev:
-	sass -s expanded --no-charset --no-source-map src/sass:.
+	sass -s expanded src/sass:.
 	css2userstyle --no-userscript theme.css
 
 release:
 	sass -s compressed --no-charset --no-source-map src/sass:.
-	postcss theme.css --no-map --replace --use autoprefixer cssnano
+	postcss theme.css --no-map --replace --use ${POSTCSS_OPTIONS}
 	css2userstyle --no-userscript theme.css
 
 watch:
