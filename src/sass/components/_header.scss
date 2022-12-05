@@ -96,13 +96,15 @@
 
 .logo {
   a {
+    display: flex;
+    align-items: center;
     height: $navbar-height;
 
     img {
-      display: block;
       margin: initial;
-      padding: 13px 0;
+      padding: 0;
       position: initial;
+      height: $logo-height;
     }
   }
 }
